@@ -7,10 +7,10 @@
 
 namespace CG\Cookie_Consent;
 
-function cookies_consent_js() { 
+function cookies_consent_js() {
 	?>
 
-	<script type="text/javascript" id="cookie-consent-js"> 
+	<script type="text/javascript" id="cookie-consent-js">
 	<?php
 	echo <<<SCRIPT
 	function getCookie(name) {
@@ -31,7 +31,7 @@ function cookies_consent_js() {
 	}
 
 	window.onload = function() {
-		var cookies_names = ['cookies_temp', 'cookies_all', 'cookies1', 'cookies2', 'cookies3'];
+		var cookies_names = ['cookies_temp', 'cookies_all', 'cookie_necessary', 'cookie_preferences', 'cookie_statistics'];
 		if (!cookies_names.some(cookieExists)) {
 			var cookiePopup = document.getElementById('cookiePopup')
 			cookiePopup.style.visibility = "visible"
@@ -40,13 +40,13 @@ function cookies_consent_js() {
 			for (var i=1; i<cookies_names.length; i++) {
 				if (getCookie(cookies_names[i]) !== null) {
 					if (cookies_names[i] == 'cookies_all') {
-						document.querySelectorAll("script[data-name='cookies1']").forEach(function(script) {
+						document.querySelectorAll("script[data-name='cookie_necessary']").forEach(function(script) {
 							script.setAttribute("data-cookies", "accepted");
 						})
-						document.querySelectorAll("script[data-name='cookies2']").forEach(function(script) {
+						document.querySelectorAll("script[data-name='cookie_preferences']").forEach(function(script) {
 							script.setAttribute("data-cookies", "accepted");
 						})
-						document.querySelectorAll("script[data-name='cookies3']").forEach(function(script) {
+						document.querySelectorAll("script[data-name='cookie_statistics']").forEach(function(script) {
 							script.setAttribute("data-cookies", "accepted");
 						})
 					} else {
@@ -60,7 +60,7 @@ function cookies_consent_js() {
 		}
 	};
 
-	// setting declined for all 
+	// setting declined for all
 	function cookies_settings_clear() {
 		document.querySelectorAll(".section__cookies__checkbox input").forEach(function(checkbox) {
 			document.querySelectorAll("script[data-name="+checkbox.name+"]").forEach(function(script) {
@@ -99,9 +99,9 @@ function cookies_consent_js() {
 	}
 
 	function run_scipts() {
-		const scripts = document.getElementsByTagName('script')
+		const scripts = document.querySelectorAll('script[type="text/plain"]')
 		for (let script of scripts) {
-			if (script.getAttribute('type') === 'text/plain' && script.getAttribute('data-cookies') === 'accepted') {
+			if (script.getAttribute('data-cookies') === 'accepted') {
 				const oScript = document.createElement('script')
 				const oScriptText = document.createTextNode(script.text)
 				oScript.appendChild(oScriptText)
@@ -118,6 +118,26 @@ function cookies_consent_js() {
 			setCookie("cookies_temp", "1", "session")
 		}
 	}
+
+	// necessary must be checked if any other is checked
+	function setNecessary(e) {
+		if (event.target.checked) {
+			if (! document.getElementById('cookie_necessary').checked) {
+				document.getElementById('cookie_necessary').checked = true;
+			}
+		}
+	}
+
+	function unsetNecessary(e) {
+		if (! event.target.checked) {
+			if (document.getElementById('cookie_preferences').checked) {
+				document.getElementById('cookie_preferences').checked = false;
+			}
+			if (document.getElementById('cookie_statistics').checked) {
+				document.getElementById('cookie_statistics').checked = false;
+			}
+		}
+	}
 SCRIPT;
 	?>
 	</script>
@@ -128,47 +148,49 @@ SCRIPT;
 function cookies_consent_html() {
 	?>
 
-	<script type="text/javascript" id="cookie-consent-html"> 
+	<script type="text/javascript" id="cookie-consent-html">
 	<?php
-		$cookies1 = __( 'Check if you agree with cookies1!', 'capgemini' );
-		$cookies2 = __( 'Check if you agree with cookies2!', 'capgemini' );
-		$cookies3 = __( 'Check if you agree with cookies3!', 'capgemini' );
-		$decline = __( 'Decline', 'capgemini' );
+		$cookie_necessary   = __( 'Necessary', 'capgemini' );
+		$cookie_preferences  = __( 'Preferences', 'capgemini' );
+		$cookie_statistics   = __( 'Statistics', 'capgemini' );
+		$decline             = __( 'Decline', 'capgemini' );
 		$decline_cookie_info = __( 'Decline cookie information', 'capgemini' );
-		$accept = __( 'Accept', 'capgemini' );
-		$accept_cookie_info = __( 'Accept cookie information', 'capgemini' );
+		$accept              = __( 'Accept', 'capgemini' );
+		$accept_cookie_info  = __( 'Accept cookie information', 'capgemini' );
 
 		echo <<<SCRIPT
 		var html = '<div id="cookiePopup" class="section__cookies" tabindex="-1">' +
 									'<div class="section__cookies__container dialog" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description">' +
-									'<h2 id="dialog-title" class="section__title col-12">Cookie consent</h2>' +
-									'<div id="dialog-description" class="section__cookies__text"></div>' +
+										'<h2 id="dialog-title" class="section__title col-12">This website uses cookies</h2>' +
+										'<div id="dialog-description" class="section__cookies__text">' +
+											'We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services.' +
+										'</div>' +
 										'<div class="section__cookies__checkbox">' +
 											'<form>' +
+											  '<div>' +
+													'<input type="checkbox" name="cookie_necessary" value="cookie_necessary" id="cookie_necessary" onclick="unsetNecessary()">' +
+													'<label for="cookie_necessary"> {$cookie_necessary}</label>' +
+											  '</div>' +
 												'<div>' +
-													'<input type="checkbox" name="cookies1" value="cookies1" id="cookies1">' +
-													'<label for="cookies1">{$cookies1}</label>' +
+													'<input type="checkbox" name="cookie_preferences" value="cookie_preferences" id="cookie_preferences" onclick="setNecessary()">' +
+													'<label for="cookie_preferences"> {$cookie_preferences}</label>' +
 												'</div>' +
 												'<div>' +
-													'<input type="checkbox" name="cookies2" value="cookies2" id="cookies2">' +
-													'<label for="cookies2">{$cookies2}</label>' +
-												'</div>' +
-												'<div>' +
-													'<input type="checkbox" name="cookies3" value="cookies3" id="cookies3">' +
-													'<label for="cookies3">{$cookies3}</label>' +
+													'<input type="checkbox" name="cookie_statistics" value="cookie_statistics" id="cookie_statistics" onclick="setNecessary()">' +
+													'<label for="cookie_statistics"> {$cookie_statistics}</label>' +
 												'</div>' +
 											'</form>' +
-										'</div>' +	
+										'</div>' +
 										'<div class="section__cookies__buttons">' +
 											'<button id="decline" class="section__button--cookies" onclick="cookies_decline()">' +
 												'<p>{$decline}</p>' +
 												'<span class="sr-only">{$decline_cookie_info}</span>' +
-											'</button>' +	
+											'</button>' +
 											'<button id="accept" class="section__button--cookies section__button section__button--transparent" onclick="cookies_accept()">' +
 												'<p>{$accept}</p>' +
 												'<span class="sr-only">{$accept_cookie_info}</span>' +
-											'</button>' +		
-										'</div>' +	
+											'</button>' +
+										'</div>' +
 									'</div>' +
 							 '</div>'
 
