@@ -168,15 +168,15 @@ function cookies_consent_html() {
 										'<div class="section__cookies__checkbox">' +
 											'<form>' +
 											  '<div>' +
-													'<input type="checkbox" name="cookie_necessary" value="cookie_necessary" id="cookie_necessary" onclick="unsetNecessary()">' +
+													'<input type="checkbox" name="cookie_necessary" value="cookie_necessary" id="cookie_necessary" onclick="unsetNecessary()" checked>' +
 													'<label for="cookie_necessary"> {$cookie_necessary}</label>' +
 											  '</div>' +
 												'<div>' +
-													'<input type="checkbox" name="cookie_preferences" value="cookie_preferences" id="cookie_preferences" onclick="setNecessary()">' +
+													'<input type="checkbox" name="cookie_preferences" value="cookie_preferences" id="cookie_preferences" onclick="setNecessary()" checked>' +
 													'<label for="cookie_preferences"> {$cookie_preferences}</label>' +
 												'</div>' +
 												'<div>' +
-													'<input type="checkbox" name="cookie_statistics" value="cookie_statistics" id="cookie_statistics" onclick="setNecessary()">' +
+													'<input type="checkbox" name="cookie_statistics" value="cookie_statistics" id="cookie_statistics" onclick="setNecessary()" checked>' +
 													'<label for="cookie_statistics"> {$cookie_statistics}</label>' +
 												'</div>' +
 											'</form>' +
@@ -202,14 +202,12 @@ SCRIPT;
 	<?php
 }
 
-
-function cookies_consent_css() {
-	?>
-	<link rel="stylesheet" type="text/css" media="all" href="<?php echo plugin_dir_url( __FILE__ ); ?>../assets/css/cg-cookie-consent.css">
-	<?php
-}
-
 add_action( 'wp_head', 'CG\Cookie_Consent\cookies_consent_js' );
-add_action( 'wp_head', 'CG\Cookie_Consent\cookies_consent_css' );
 add_action( 'wp_footer', 'CG\Cookie_Consent\cookies_consent_html' );
+add_action(
+	'wp_enqueue_scripts',
+	function () {
+		wp_enqueue_style( 'cookie-consent', esc_url( plugin_dir_url( __FILE__ ) ) . '../assets/css/cg-cookie-consent.css', [], false );
+	}
+);
 
