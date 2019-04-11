@@ -1,1 +1,2 @@
-# 2817-cookie-consent-plugin
+# Wordpress GDPR compatible Cookie Consent plugin
+
