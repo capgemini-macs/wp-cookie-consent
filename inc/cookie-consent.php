@@ -150,7 +150,9 @@ function cookies_consent_html() {
 
 	<script type="text/javascript" id="cookie-consent-html">
 	<?php
-		$cookie_necessary   = __( 'Necessary', 'capgemini' );
+		$cookie_title        = __( 'This website uses cookies', 'capgemini' );
+		$cookie_text         = __( 'We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services.', 'capgemini' );
+		$cookie_necessary    = __( 'Necessary', 'capgemini' );
 		$cookie_preferences  = __( 'Preferences', 'capgemini' );
 		$cookie_statistics   = __( 'Statistics', 'capgemini' );
 		$decline             = __( 'Decline', 'capgemini' );
@@ -161,23 +163,21 @@ function cookies_consent_html() {
 		echo <<<SCRIPT
 		var html = '<div id="cookiePopup" class="section__cookies" tabindex="-1">' +
 									'<div class="section__cookies__container dialog" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description">' +
-										'<h2 id="dialog-title" class="section__title col-12">This website uses cookies</h2>' +
-										'<div id="dialog-description" class="section__cookies__text">' +
-											'We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services.' +
-										'</div>' +
+										'<h2 id="dialog-title" class="section__title col-12"> {$cookie_title }</h2>' +
+										'<div id="dialog-description" class="section__cookies__text"> {$cookie_text}</div>' +
 										'<div class="section__cookies__checkbox">' +
 											'<form>' +
 											  '<div>' +
 													'<input type="checkbox" name="cookie_necessary" value="cookie_necessary" id="cookie_necessary" onclick="unsetNecessary()" checked>' +
-													'<label for="cookie_necessary"> {$cookie_necessary}</label>' +
+													'<label for="cookie_necessary"><span></span> {$cookie_necessary}</label>' +
 											  '</div>' +
 												'<div>' +
 													'<input type="checkbox" name="cookie_preferences" value="cookie_preferences" id="cookie_preferences" onclick="setNecessary()" checked>' +
-													'<label for="cookie_preferences"> {$cookie_preferences}</label>' +
+													'<label for="cookie_preferences"><span></span> {$cookie_preferences}</label>' +
 												'</div>' +
 												'<div>' +
 													'<input type="checkbox" name="cookie_statistics" value="cookie_statistics" id="cookie_statistics" onclick="setNecessary()" checked>' +
-													'<label for="cookie_statistics"> {$cookie_statistics}</label>' +
+													'<label for="cookie_statistics"><span></span> {$cookie_statistics}</label>' +
 												'</div>' +
 											'</form>' +
 										'</div>' +
