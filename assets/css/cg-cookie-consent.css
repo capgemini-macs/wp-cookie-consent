@@ -1,5 +1,5 @@
 #cookiePopup {
-	position: fixed;
+	position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
@@ -23,5 +23,6 @@
 	.section__cookies__container {
 		width: 380px;
 		padding: 2rem;
+		max-width: 100%;
 	}
 }
