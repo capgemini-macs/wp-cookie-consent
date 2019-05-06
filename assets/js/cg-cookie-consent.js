@@ -1,87 +1,161 @@
-/**
- * Cookie types
- */
-const cookieTypes = new Set(['necessary', 'preferences', 'statistics'])
-
-/**
- * Check if cookie type is allowed
- * @param {string} cType cookie type
- */
-const allowCookie = (cType) => {
-  // check if it's a proper type
-  if (!cookieTypes.has(cType)) {
-    return false
-  }
-
-  // get allowed cookie types
-  const allowedCookies = getAllowedCookies()
-  // check if type is allowed
-  if (allowedCookies.has(cType)) {
-    return true
-  }
-  return false
+function getCookie (name) {
+  var re = new RegExp(name + '=([^;]+)')
+  var value = re.exec(document.cookie)
+  return (value != null) ? unescape(value[1]) : null
 }
 
-/**
- * Get types allowed by user
- */
-const getAllowedCookies = () => {
-  // return all types if user allowed all
-  if (getCookie('cookies_all') === '1') {
-    return cookieTypes
-  }
-  // search for individual types if user didn't allow all
-  let allowedCookieTypes = new Set()
-  for (let type of cookieTypes) {
-    if (getCookie(`cookie_${type}`) === '1') {
-      allowedCookieTypes.add(type)
-    }
-  }
-  return allowedCookieTypes
+function setCookie (e, o, r) {
+  var t = new Date()
+  t.setTime(t.getTime() + 24 * r * 60 * 60 * 1e3)
+  var i = null
+  r !== 'session' && (i = 'expires=' + t.toUTCString()), document.cookie = e + '=' + o + ';' + i + ';path=/'
 }
 
-/**
- * Get cookie value
- * @param {string} cName cookie name
- */
-const getCookie = (cName) => {
-  let cValue = document.cookie
-  let cStart = cValue.indexOf(' ' + cName + '=')
-  if (cStart === -1) {
-    cStart = cValue.indexOf(cName + '=')
-  }
-  if (cStart === -1) {
-    cValue = null
+function cookieExists (name) {
+  return getCookie(name) !== null
+}
+
+function runCookiesPlugin () {
+  var newDiv = document.createElement('div')
+  newDiv.innerHTML = '<div id="cookiePopup" class="section__cookies" tabindex="-1">' +
+                '<div class="section__cookies__container dialog" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description">' +
+                  '<h2 id="dialog-title" class="section__title col-12">' + cookie_script_vars.title + '</h2>' +
+                  '<div id="dialog-description" class="section__cookies__text">' + cookie_script_vars.text + '</div>' +
+                    '<div class="section__cookies__checkbox">' +
+                      '<form>' +
+                        '<div>' +
+                          '<input type="checkbox" name="cookie_necessary" value="cookie_necessary" id="cookie_necessary" onclick="unsetNecessary()" checked>' +
+                          '<label for="cookie_necessary"><span></span> ' + cookie_script_vars.cookie_necessary + '</label>' +
+                        '</div>' +
+                        '<div>' +
+                          '<input type="checkbox" name="cookie_preferences" value="cookie_preferences" id="cookie_preferences" onclick="setNecessary()" checked>' +
+                          '<label for="cookie_preferences"><span></span> ' + cookie_script_vars.cookie_preferences + '</label>' +
+                        '</div>' +
+                        '<div>' +
+                          '<input type="checkbox" name="cookie_statistics" value="cookie_statistics" id="cookie_statistics" onclick="setNecessary()" checked>' +
+                          '<label for="cookie_statistics"><span></span> ' + cookie_script_vars.cookie_statistics + '</label>' +
+                        '</div>' +
+                      '</form>' +
+                    '</div>' +
+                    '<div class="section__cookies__buttons">' +
+                      '<button id="decline" class="section__button--cookies" onclick="cookiesDecline()">' +
+                        '<p>' + cookie_script_vars.decline + '</p>' +
+                        '<span class="sr-only">' + cookie_script_vars.decline_cookie_info + '</span>' +
+                      '</button>' +
+                      '<button id="accept" class="section__button--cookies section__button section__button--transparent" onclick="cookiesAccept()">' +
+                        '<p>' + cookie_script_vars.accept + '</p>' +
+                        '<span class="sr-only">' + cookie_script_vars.accept_cookie_info + '</span>' +
+                      '</button>' +
+                    '</div>' +
+                  '</div>' +
+                '</div>'
+
+  document.body.appendChild(newDiv)
+
+  var cookiesNames = ['cookies_temp', 'cookies_all', 'cookie_necessary', 'cookie_preferences', 'cookie_statistics']
+  if (!cookiesNames.some(cookieExists)) {
+    var cookiePopup = document.getElementById('cookiePopup')
+    cookiePopup.style.visibility = 'visible'
+    cookiePopup.style.opacity = '1'
   } else {
-    cStart = cValue.indexOf('=', cStart) + 1
-    let cEnd = cValue.indexOf(';', cStart)
-    if (cEnd === -1) {
-      cEnd = cValue.length
+    for (var i = 1; i < cookiesNames.length; i++) {
+      if (getCookie(cookiesNames[i]) !== null) {
+        if (cookiesNames[i] === 'cookies_all') {
+          document.querySelectorAll("script[data-name='cookie_necessary']").forEach(function (script) {
+            script.setAttribute('data-cookies', 'accepted')
+          })
+          document.querySelectorAll("script[data-name='cookie_preferences']").forEach(function (script) {
+            script.setAttribute('data-cookies', 'accepted')
+          })
+          document.querySelectorAll("script[data-name='cookie_statistics']").forEach(function (script) {
+            script.setAttribute('data-cookies', 'accepted')
+          })
+        } else {
+          document.querySelectorAll('script[data-name=' + cookiesNames[i] + ']').forEach(function (script) {
+            script.setAttribute('data-cookies', 'accepted')
+          })
+        }
+      }
     }
-    cValue = unescape(cValue.substring(cStart, cEnd))
+    runScripts()
   }
-  return cValue
 }
 
-/**
- * Set cookie
- * @param {string} cType cookie type
- * @param {string} cName cookie name
- * @param {any} value cookie value
- * @param {number} exdays expiry after n days
- */
-const setCookie = (cType, cName, value, exdays) => {
-  if (!allowCookie(cType)) {
-    return
-  }
-
-  const exdate = new Date()
-  exdate.setDate(exdate.getDate() + exdays)
-  const cValue = escape(value) + ((exdays === null) ? '' : '; expires=' + exdate.toUTCString())
-  document.cookie = cName + '=' + cValue
+// setting declined for all
+function cookiesSettingsClear () {
+  document.querySelectorAll('.section__cookies__checkbox input').forEach(function (checkbox) {
+    document.querySelectorAll('script[data-name=' + checkbox.name + ']').forEach(function (script) {
+      script.setAttribute('data-cookies', 'declined')
+    })
+  })
 }
 
-module.exports = {
-  getCookie,
-  setCookie
+// setting accepted
+function cookiesAccept () {
+  cookiesSettingsClear()
+  var cookiesAccepted = []
+  document.querySelectorAll('.section__cookies__checkbox input:checked').forEach(function (checkbox) {
+    document.querySelectorAll('script[data-name=' + checkbox.name + ']').forEach(function (script) {
+      script.setAttribute('data-cookies', 'accepted')
+    })
+    cookiesAccepted.push(checkbox.name)
+  })
+  var cookiesTemp = false
+  if (cookiesAccepted.length === 3) {
+    setCookie('cookies_all', '1', 9999)
+  } else if (cookiesAccepted.length === 0) {
+    cookiesTemp = true
+  } else {
+    for (var i = 0; i < cookiesAccepted.length; i++) {
+      setCookie(cookiesAccepted[i], '1', 9999)
+    }
+  }
+  runScripts()
+  cookiesPopupClose(cookiesTemp)
+}
+
+function cookiesDecline () {
+  cookiesSettingsClear()
+  cookiesPopupClose(true)
+}
+
+function runScripts () {
+  const scripts = document.querySelectorAll('script[type="text/plain"]')
+  for (let script of scripts) {
+    if (script.getAttribute('data-cookies') === 'accepted') {
+      const oScript = document.createElement('script')
+      const oScriptText = document.createTextNode(script.text)
+      oScript.appendChild(oScriptText)
+      document.body.appendChild(oScript)
+    }
+  }
+}
+
+function cookiesPopupClose (cookiesTemp) {
+  var cookiePopup = document.getElementById('cookiePopup')
+  cookiePopup.style.visibility = 'hidden'
+  cookiePopup.style.opacity = '0'
+  if (cookiesTemp) {
+    setCookie('cookies_temp', '1', 'session')
+  }
+}
+
+// necessary must be checked if any other is checked
+function setNecessary (e) {
+  if (event.target.checked) {
+    if (!document.getElementById('cookie_necessary').checked) {
+      document.getElementById('cookie_necessary').checked = true
+    }
+  }
+}
+
+function unsetNecessary (e) {
+  if (!event.target.checked) {
+    if (document.getElementById('cookie_preferences').checked) {
+      document.getElementById('cookie_preferences').checked = false
+    }
+    if (document.getElementById('cookie_statistics').checked) {
+      document.getElementById('cookie_statistics').checked = false
+    }
+  }
 }
