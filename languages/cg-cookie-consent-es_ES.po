@@ -1,0 +1,100 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Capgemini Cookie Consent\n"
+"POT-Creation-Date: 2019-05-06 12:11+0200\n"
+"PO-Revision-Date: 2019-05-06 12:12+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: plugin.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: inc/cookie-consent.php:13
+msgid "Cookie"
+msgstr "Cookie"
+
+#: inc/cookie-consent.php:82
+msgid "This website uses cookies"
+msgstr "Este sitio web utiliza cookies"
+
+#: inc/cookie-consent.php:100
+msgid ""
+"We use cookies to ensure the proper functionning of this website, to "
+"remember your preferences, and, generally, to improve your experience. We "
+"also use cookies to propose personalized contents, social media features and "
+"to analyse our traffic. We also share information about your use of our site "
+"with our social media, advertising and analytics partners who may combine it "
+"with other information that you’ve provided to them or that they’ve "
+"collected from your use of their services. You have the right to choose "
+"which cookie can be used to trace your navigation on the website. Please "
+"unselect the checkbox if you which to withdraw your consent."
+msgstr ""
+"Utilizamos cookies para asegurar el buen funcionamiento del sitio, facilitar "
+"la navegación, registrar sus preferencias de usuario y, en general, mejorar "
+"su experiencia. También utilizamos cookies para proporcionarle contenidos "
+"personalizados, funcionalidades de redes sociales y para analizar nuestro "
+"tráfico.También compartimos información sobre su uso de nuestro sitio web "
+"con nuestros socios de redes sociales, publicidad y análisis, que pueden "
+"combinarla con otros datos que usted les proporcione o que recopilen cuando "
+"utilice sus servicios. Usted tiene derecho a elegir qué tipo de cookies se "
+"pueden utilizar para rastrear su navegación en el sitio web. Por favor, "
+"deseleccione los tipos de cookies que no desea instalar."
+
+#: inc/cookie-consent.php:106
+msgid "Necessary Cookies"
+msgstr "Cookies técnicas"
+
+#: inc/cookie-consent.php:112
+msgid "Preferences Cookies"
+msgstr "Cookie de personalización"
+
+#: inc/cookie-consent.php:118
+msgid "Statistics Cookies"
+msgstr "Cookie de análisis"
+
+#: inc/cookie-consent.php:124
+msgid "Decline"
+msgstr "Rechazar"
+
+#: inc/cookie-consent.php:130
+msgid "Accept"
+msgstr "Aceptar"
+
+#: inc/cookie-consent.php:140
+msgid "Decline cookie information"
+msgstr "Rechazar cookies"
+
+#: inc/cookie-consent.php:142
+msgid "Accept cookie information"
+msgstr "Aceptar cookies"
+
+#. Plugin Name of the plugin/theme
+msgid "Capgemini Cookie Consent"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "https://capgemini.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Allows to set an individual group of cookies, all groups or don't allow at "
+"all"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Capgemini"
+msgstr ""
