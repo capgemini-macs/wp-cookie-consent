@@ -1,5 +1,8 @@
 # Wordpress GDPR compatible Cookie Consent plugin
 
+Requires Fieldmenager plugin to be installed and active
+(http://fieldmanager.org/)
+
 This plugin allows a user to choose which types of cookies does he accept. There are three types: 'necessary', 'preferences' and 'statistics'. User can decline all, allow all, or allow individual type. 'Necessary' cookies are required if 'preferences' or 'statistics' marked.
 
 ## Usage
@@ -18,3 +21,5 @@ You can control those cookies in two ways:
 
 * `getCookie(cName)` - returns cookie value or null if cookie is missing
 * `setCookie(cType, cName, value, exdays)` - save cookie if user allows cookie of `cType` type.
+
+Plugins settings are in: Settings / Cookie
