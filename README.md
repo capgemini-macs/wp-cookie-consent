@@ -11,15 +11,20 @@ Enable plugin :)
 
 You can control those cookies in two ways:
 
-1. Add your JS scripts as `type="text/plain"`. The plugin would enable it if the user allowed cookies of that type.
+### HTML tags
+
+Add your JS scripts as `type="text/plain"`. The plugin would enable it if the user allowed cookies of that type.
 
 ```html
 <script src="/my/script-with-cookie.js" type="text/plain" data-name='cookie_necessary'></script>
 ```
 
-2. ES6 module `assets/js/cg-cookie-methods.js` have two helper methods:
+### Helper functions
+
+ES6 module `assets/js/cg-cookie-methods.js` have two helper functions:
 
 * `getCookie(cName)` - returns cookie value or null if cookie is missing
 * `setCookie(cType, cName, value, exdays)` - save cookie if user allows cookie of `cType` type.
 
 Plugins settings are in: Settings / Cookie
+

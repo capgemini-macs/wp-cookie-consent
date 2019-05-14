@@ -1,4 +1,10 @@
 /**
+ * Cookie get/set helper functions with user consent check
+ * 
+ * @author Remigiusz Loginow <remigiusz.loginow@capgemini.com>
+ */
+
+/**
  * Cookie types
  */
 const cookieTypes = new Set(['necessary', 'preferences', 'statistics'])
@@ -82,6 +88,7 @@ const setCookie = (cType, cName, value, exdays) => {
 }
 
 module.exports = {
+  allowCookie,
   getCookie,
   setCookie
 }
