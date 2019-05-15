@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Capgemini Cookie Consent\n"
 "POT-Creation-Date: 2019-05-06 12:11+0200\n"
-"PO-Revision-Date: 2019-05-06 12:12+0200\n"
+"PO-Revision-Date: 2019-05-07 15:45+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -58,11 +58,11 @@ msgstr "Cookies técnicas"
 
 #: inc/cookie-consent.php:112
 msgid "Preferences Cookies"
-msgstr "Cookie de personalización"
+msgstr "Cookies de personalización"
 
 #: inc/cookie-consent.php:118
 msgid "Statistics Cookies"
-msgstr "Cookie de análisis"
+msgstr "Cookies de análisis"
 
 #: inc/cookie-consent.php:124
 msgid "Decline"
