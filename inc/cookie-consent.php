@@ -142,31 +142,31 @@ add_action(
 		}
 
 		if ( ! empty( $fm_cookie_fields['cookie-necessary'] ) ) {
-			$cookie_necessary = esc_html__( $fm_cookie_fields['cookie-necessary'] );
+			$cookie_necessary = esc_html( $fm_cookie_fields['cookie-necessary'] );
 		} else {
 			$cookie_necessary = esc_html__( 'Necessary Cookies', 'cg-cookie-consent' );
 		}
 
 		if ( ! empty( $fm_cookie_fields['cookie-preferences'] ) ) {
-			$cookie_preferences = esc_html__( $fm_cookie_fields['cookie-preferences'] );
+			$cookie_preferences = esc_html( $fm_cookie_fields['cookie-preferences'] );
 		} else {
 			$cookie_preferences = esc_html__( 'Preferences Cookies', 'cg-cookie-consent' );
 		}
 
 		if ( ! empty( $fm_cookie_fields['cookie-statistics'] ) ) {
-			$cookie_statistics = esc_html__( $fm_cookie_fields['cookie-statistics'] );
+			$cookie_statistics = esc_html( $fm_cookie_fields['cookie-statistics'] );
 		} else {
 			$cookie_statistics = esc_html__( 'Statistics Cookies', 'cg-cookie-consent' );
 		}
 
 		if ( ! empty( $fm_cookie_fields['decline-button'] ) ) {
-			$decline_button = esc_html__( $fm_cookie_fields['decline-button'] );
+			$decline_button = esc_html( $fm_cookie_fields['decline-button'] );
 		} else {
 			$decline_button = esc_html__( 'Decline', 'cg-cookie-consent' );
 		}
 
 		if ( ! empty( $fm_cookie_fields['accept-button'] ) ) {
-			$accept_button = esc_html__( $fm_cookie_fields['accept-button'] );
+			$accept_button = esc_html( $fm_cookie_fields['accept-button'] );
 		} else {
 			$accept_button = esc_html__( 'Accept', 'cg-cookie-consent' );
 		}
