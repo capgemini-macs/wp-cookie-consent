@@ -16,6 +16,17 @@ function cookieExists (name) {
 }
 
 function runCookiesPlugin () {
+
+  /**
+  // LODASH TEMPLATE EXAMPLE
+  var cookiePopupTemplate = window.lodash.template('<div><%- value %></div>')
+  var cookiePopupEscaped  = cookiePopupTemplate( { 'value': 'hiya!' } )
+  
+  var newDiv = document.createElement('div')
+  newDiv.innerHTML = cookiePopupEscaped;
+  console.log(newDiv)
+  */
+
   var newDiv = document.createElement('div')
   newDiv.innerHTML = '<div id="cookiePopup" class="section__cookies" tabindex="-1">' +
                 '<div class="section__cookies__container dialog" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description">' +
