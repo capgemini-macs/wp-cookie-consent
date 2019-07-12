@@ -28,3 +28,7 @@ ES6 module `assets/js/cg-cookie-methods.js` have two helper functions:
 
 Plugins settings are in: Settings / Cookie
 
+## Dependencies
+
+- Fieldmanager plugin
+- Lodash (registered in WordPress core since 5.0)
