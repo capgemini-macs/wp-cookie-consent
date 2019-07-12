@@ -18,38 +18,38 @@ function cookieExists (name) {
 function runCookiesPlugin () {
 
 var cookiePopupTemplate = window.lodash.template(
-              '<div id="cookiePopup" class="section__cookies" tabindex="-1">' +
-              '<div class="section__cookies__container dialog" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description">' +
-                '<h2 id="dialog-title" class="section__title col-12"><%- title %></h2>' +
-                '<div id="dialog-description" class="section__cookies__text"><%= text %></div>' +
-                  '<div class="section__cookies__checkbox">' +
-                    '<form>' +
-                      '<div>' +
-                        '<input type="checkbox" name="cookie_necessary" value="cookie_necessary" id="cookie_necessary" onclick="unsetNecessary()" checked>' +
-                        '<label for="cookie_necessary"><span></span> <%- cookie_necessary %></label>' +
-                      '</div>' +
-                      '<div>' +
-                        '<input type="checkbox" name="cookie_preferences" value="cookie_preferences" id="cookie_preferences" onclick="setNecessary()" checked>' +
-                        '<label for="cookie_preferences"><span></span> <%- cookie_preferences %></label>' +
-                      '</div>' +
-                      '<div>' +
-                        '<input type="checkbox" name="cookie_statistics" value="cookie_statistics" id="cookie_statistics" onclick="setNecessary()" checked>' +
-                        '<label for="cookie_statistics"><span></span> <%- cookie_statistics %></label>' +
-                      '</div>' +
-                    '</form>' +
-                  '</div>' +
-                  '<div class="section__cookies__buttons">' +
-                    '<button id="decline" class="section__button--cookies" onclick="cookiesDecline()">' +
-                      '<p><%- decline %></p>' +
-                      '<span class="sr-only"><%- decline_cookie_info %></span>' +
-                    '</button>' +
-                    '<button id="accept" class="section__button--cookies section__button section__button--transparent" onclick="cookiesAccept()">' +
-                      '<p><%- accept %></p>' +
-                      '<span class="sr-only"><%- accept_cookie_info %></span>' +
-                    '</button>' +
-                  '</div>' +
-                '</div>' +
-              '</div>'
+              '<div id="cookiePopup" class="section__cookies" tabindex="-1"> \
+                <div class="section__cookies__container dialog" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description"> \
+                  <h2 id="dialog-title" class="section__title col-12"><%- title %></h2> \
+                  <div id="dialog-description" class="section__cookies__text"><%= text %></div> \
+                    <div class="section__cookies__checkbox"> \
+                      <form> \
+                      <div> \
+                        <input type="checkbox" name="cookie_necessary" value="cookie_necessary" id="cookie_necessary" onclick="unsetNecessary()" checked> \
+                        <label for="cookie_necessary"><span></span> <%- cookie_necessary %></label> \
+                      </div> \
+                      <div> \
+                        <input type="checkbox" name="cookie_preferences" value="cookie_preferences" id="cookie_preferences" onclick="setNecessary()" checked> \
+                        <label for="cookie_preferences"><span></span> <%- cookie_preferences %></label> \
+                      </div> \
+                      <div> \
+                        <input type="checkbox" name="cookie_statistics" value="cookie_statistics" id="cookie_statistics" onclick="setNecessary()" checked> \
+                        <label for="cookie_statistics"><span></span> <%- cookie_statistics %></label> \
+                      </div> \
+                    </form> \
+                  </div> \
+                  <div class="section__cookies__buttons"> \
+                    <button id="decline" class="section__button--cookies" onclick="cookiesDecline()"> \
+                      <p><%- decline %></p> \
+                      <span class="sr-only"><%- decline_cookie_info %></span> \
+                    </button> \
+                    <button id="accept" class="section__button--cookies section__button section__button--transparent" onclick="cookiesAccept()"> \
+                      <p><%- accept %></p> \
+                      <span class="sr-only"><%- accept_cookie_info %></span> \
+                    </button> \
+                  </div> \
+                </div> \
+              </div>'
             )
   var cookiePopupEscaped  = cookiePopupTemplate( {
                               'title': cookie_script_vars.title,
@@ -65,7 +65,6 @@ var cookiePopupTemplate = window.lodash.template(
 
   var newDiv = document.createElement('div')
   newDiv.innerHTML = cookiePopupEscaped;
-  console.log(newDiv)
 
   document.body.appendChild(newDiv)
 
