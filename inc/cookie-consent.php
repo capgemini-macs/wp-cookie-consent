@@ -306,9 +306,5 @@ function data_layers() {
 		'cookie_statistics'  => apply_filters( 'cg_cookies_data_layer_statistics', $data['cookie_statistics'] ),
 	];
 
-	if ( ! empty( $data ) ) {
-		return $data;
-	}
-
-	return '';
+	return $data;
 }
