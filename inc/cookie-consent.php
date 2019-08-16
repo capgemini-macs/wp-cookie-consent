@@ -217,7 +217,98 @@ add_action(
 			</script>
 			<?php
 		endif;
+		?>
+		
+		<script type='text/javascript'>
+			var dataLayerItems = <?php echo wp_json_encode( data_layers() ); ?>
+		</script>
+		<?php
 	},
 	1,
 	1
 );
+
+/**
+ * Outputs the dataLayer object
+ *
+ * Use cg_cookies_data_layer_{$type} filter to add custom values to the dataLayer
+ * available $types:
+ * - necessary
+ * - preferences
+ * - statistics
+ *
+ * add_filter( 'cg_cookies_data_layer_necessary', function( $data ) {
+ *     $data['my_var'] = 'hello';
+ *     return $data;
+ * } );
+ *
+ * 
+ * @return string
+ */
+function data_layers() {
+
+	$data = [
+		'cookie_necessary'   => [],
+		'cookie_preferences' => [],
+		'cookie_statistics'  => [],
+	];
+
+
+	if ( is_user_logged_in() ) {
+		$user                                  = wp_get_current_user();
+		$data['cookie_necessary']['logged_in'] = $user->get( 'user_nicename' );
+		$data['cookie_necessary']['role']      = implode( ',', array_keys( $user->caps ) );
+	}
+
+	if ( is_404() ) {
+		$data['cookie_statistics']['404'] = true;
+	}
+
+	if ( is_multisite() ) {
+		$data['cookie_statistics']['blog']    = home_url();
+		$data['cookie_statistics']['network'] = network_home_url();
+	}
+
+	if ( is_front_page() ) {
+		$data['cookie_statistics']['front_page'] = true;
+	}
+
+	if ( is_singular() ) {
+		$data['cookie_statistics']['post_type'] = get_post_type();
+		$data['cookie_statistics']['post_id']   = get_the_ID();
+	}
+	if ( is_archive() ) {
+		$data['cookie_statistics']['archive'] = true;
+		if ( is_date() ) {
+			$data['cookie_statistics']['archive'] = 'date';
+			$data['cookie_statistics']['date']    = get_the_date();
+		}
+		if ( is_search() ) {
+			$data['cookie_statistics']['archive'] = 'search';
+			$data['cookie_statistics']['search']  = get_search_query();
+		}
+		if ( is_post_type_archive() ) {
+			$data['cookie_statistics']['archive'] = get_post_type();
+		}
+		if ( is_tag() || is_category() || is_tax() ) {
+			$data['cookie_statistics']['archive'] = get_queried_object()->taxonomy;
+			$data['cookie_statistics']['term']    = get_queried_object()->slug;
+		}
+		if ( is_author() ) {
+			$data['cookie_statistics']['archive'] = 'author';
+			$data['cookie_statistics']['author']  = get_queried_object()->user_nicename;
+		}
+	}
+
+	$data = [
+		'cookie_necessary'   => apply_filters( 'cg_cookies_data_layer_necessary', $data['cookie_necessary'] ),
+		'cookie_preferences' => apply_filters( 'cg_cookies_data_layer_preferences', $data['cookie_preferences'] ),
+		'cookie_statistics'  => apply_filters( 'cg_cookies_data_layer_statistics', $data['cookie_statistics'] ),
+	];
+
+	if ( ! empty( $data ) ) {
+		return $data;
+	}
+
+	return '';
+}
