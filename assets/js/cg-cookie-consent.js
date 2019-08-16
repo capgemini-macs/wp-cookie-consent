@@ -137,14 +137,19 @@ function cookiesDecline () {
 
 function runScripts () {
   const scripts = document.querySelectorAll('script[type="text/plain"]')
+  let customDataLayer = {}
   for (let script of scripts) {
     if (script.getAttribute('data-cookies') === 'accepted') {
       const oScript = document.createElement('script')
       const oScriptText = document.createTextNode(script.text)
       oScript.appendChild(oScriptText)
       document.body.appendChild(oScript)
+      customDataLayer = _.merge( customDataLayer, window.dataLayerItems[script.getAttribute('data-name')])
     }
   }
+
+  // push custom layers to GTM
+  window.dataLayer.push(customDataLayer)
 }
 
 function cookiesPopupClose (cookiesTemp) {
