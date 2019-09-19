@@ -150,7 +150,7 @@ function runScripts () {
   }
 
   // push custom layers to GTM
-  window.dataLayer.push({customDataLayer})
+  window.dataLayer.push(customDataLayer)
 }
 
 function cookiesPopupClose (cookiesTemp) {
