@@ -138,6 +138,7 @@ function cookiesDecline () {
 function runScripts () {
   const scripts = document.querySelectorAll('script[type="text/plain"]')
   let customDataLayer = {}
+  window.dataLayer = window.dataLayer || []
   for (let script of scripts) {
     if (script.getAttribute('data-cookies') === 'accepted') {
       const oScript = document.createElement('script')
