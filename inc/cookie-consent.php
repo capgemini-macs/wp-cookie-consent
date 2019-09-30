@@ -194,6 +194,23 @@ add_action(
 	function() {
 		$fm_cookie_fields = get_option( 'cg_cookie', [] );
 
+		/**
+		 * Filter the cg_cookies_network_id variable.
+		 *
+		 * @param string $network_container_id The network GTM container ID.
+		 */
+		$network_container_id = apply_filters( 'cg_cookies_network_id', get_site_option( 'cg_cookies_network_id', false ) );
+
+		// Always output network container
+		// TODO add conditional display in JS when cookie necessary is turned on by user
+		if ( ! empty( $network_container_id ) ) {
+			?>
+			<script type='text/javascript' data-name='cookie_network'>
+				(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','<?php echo esc_js( $fm_cookie_fields['cookie-necessary-gtm'] ); ?>');
+			</script>
+			<?php
+		}
+
 		if ( ! empty( $fm_cookie_fields['cookie-necessary-gtm'] ) ) :
 			?>
 			<script type='text/plain' data-name='cookie_necessary'>
@@ -218,7 +235,7 @@ add_action(
 			<?php
 		endif;
 		?>
-		
+
 		<script type='text/javascript'>
 			var dataLayerItems = <?php echo wp_json_encode( data_layers() ); ?>
 		</script>
@@ -308,3 +325,50 @@ function data_layers() {
 
 	return $data;
 }
+
+
+add_action( 'wpmu_options', __NAMESPACE__ . '\\add_network_settings' );
+
+/**
+ * Display Network Settings for Google Tag Manager
+ */
+function add_network_settings() {
+	?>
+	<h3><?php esc_html_e( 'Network Google Tag Manager', 'cg-cookie-consent' ); ?></h3>
+	<table id="menu" class="form-table">
+		<tr valign="top">
+			<th scope="row">
+				<label for="cg_cookies_network_id"><?php esc_html_e( 'Container ID', 'cg-cookie-consent' ); ?></label>
+			</th>
+			<td>
+				<?php
+					text_settings_field( 
+						[
+							'name'       => 'cg_cookies_network_id',
+							'value'      => get_site_option( 'cg_cookies_network_id' ),
+							'decription' => esc_html__( 'Enter your network container ID eg. GTM-123ABC', 'cg-cookie-consent' ),
+						]
+					);
+				?>
+			</td>
+		</tr>
+	</table>
+
+	<?php 
+	wp_nonce_field( 'network_settings', '_cg_cookies_nonce' );
+}
+
+add_action( 'update_wpmu_options', __NAMESPACE__ . '\\save_network_settings' );
+
+/**
+ * Save Network Settings for Google Tag Manager.
+ */
+function save_network_settings() {
+
+	check_admin_referer( 'network_settings', '_cg-cache_nonce' );
+
+	if ( isset( $_POST['cg_cookies_network_id'] ) ) {
+		update_site_option( 'cg_cookies_network_id', sanitize_text_field( $_POST['cg_cookies_network_id'] ) );
+	}
+}
+
