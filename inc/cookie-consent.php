@@ -192,6 +192,7 @@ add_action(
 add_action(
 	'wp_head',
 	function() {
+
 		$fm_cookie_fields = get_option( 'cg_cookie', [] );
 
 		/**
@@ -365,10 +366,33 @@ add_action( 'update_wpmu_options', __NAMESPACE__ . '\\save_network_settings' );
  */
 function save_network_settings() {
 
-	check_admin_referer( 'network_settings', '_cg-cache_nonce' );
+	check_admin_referer( 'network_settings', '_cg_cookies_nonce' );
 
 	if ( isset( $_POST['cg_cookies_network_id'] ) ) {
 		update_site_option( 'cg_cookies_network_id', sanitize_text_field( $_POST['cg_cookies_network_id'] ) );
 	}
+}
+
+/**
+ * Text field for settings text field.
+ *
+ * @param array $args The field settings.
+ */
+function text_settings_field( array $args ) {
+	$args = wp_parse_args( 
+		$args,
+		[
+			'name'        => '',
+			'value'       => '',
+			'description' => '',
+		]
+	);
+
+	printf(
+		'<input type="text" id="%1$s" name="%1$s" value="%2$s" />%3$s',
+		esc_attr( $args['name'] ),
+		esc_attr( $args['value'] ),
+		$args['description'] ? '<br /> <span class="description">' . esc_html( $args['description'] ) . '</span>' : ''
+	);
 }
 
