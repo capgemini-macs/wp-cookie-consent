@@ -83,27 +83,35 @@ function runCookiesPlugin() {
     for (var i = 1; i < cookiesNames.length; i++) {
       if (getCookie(cookiesNames[i]) !== null) {
         if (cookiesNames[i] === "cookies_all") {
-          document
+          var cookiesNecessary = document
             .querySelectorAll("script[data-name='cookie_necessary']")
-            .forEach(function(script) {
-              script.setAttribute("data-cookies", "accepted");
+            for (var i = 0, arrNecessaryLength = cookiesNecessary.length; i < arrNecessaryLength; i++ ) {
+              (function() {
+              cookiesNecessary[i].setAttribute("data-cookies", "accepted");
             });
-          document
+          }
+          var cookiesPreferences = document
             .querySelectorAll("script[data-name='cookie_preferences']")
-            .forEach(function(script) {
-              script.setAttribute("data-cookies", "accepted");
+            for ( var j = 0, arrPreferencesLength = cookiesPreferences.length; j < arrPreferencesLength; j++ ) {
+              (function() {
+              cookiesPreferences[j].setAttribute("data-cookies", "accepted");
             });
-          document
+          }
+          var cookiesStatistic = document
             .querySelectorAll("script[data-name='cookie_statistics']")
-            .forEach(function(script) {
-              script.setAttribute("data-cookies", "accepted");
+            for ( var k = 0, arrStatisticsLength = cookiesStatistic.length; k < arrStatisticsLength; k++ ) {
+              (function() {
+              cookiesStatistic[k].setAttribute("data-cookies", "accepted");
             });
+          }
         } else {
-          document
+          var checkedCookies = document
             .querySelectorAll("script[data-name=" + cookiesNames[i] + "]")
-            .forEach(function(script) {
-              script.setAttribute("data-cookies", "accepted");
+            for ( l = 0, arrCheckedCookiesLength = checkedCookies.length; l < arrCheckedCookiesLength; l++ ) {
+              (function() {
+              checkedCookies[l].setAttribute("data-cookies", "accepted");
             });
+          }
         }
       }
     }
@@ -113,30 +121,38 @@ function runCookiesPlugin() {
 } // setting declined for all
 
 function cookiesSettingsClear() {
-  document
+  var clearedCookies = document
     .querySelectorAll(".section__cookies__checkbox input")
-    .forEach(function(checkbox) {
-      document
-        .querySelectorAll("script[data-name=" + checkbox.name + "]")
-        .forEach(function(script) {
-          script.setAttribute("data-cookies", "declined");
+    for ( var i = 0, arrClearedCookiesLength = clearedCookies.length; i < arrClearedCookiesLength; i++ ) {
+      (function() {
+      var declinedCookies = document
+        .querySelectorAll("script[data-name=" + clearedCookies[i].name + "]")
+        for ( var j = 0, arrDeclinedCookies = declinedCookies.length; j < arrDeclinedCookies; j++ ) {
+          (function() {
+          declinedCookies[j].setAttribute("data-cookies", "declined");
         });
+      }
     });
+  }
 } // setting accepted
 
 function cookiesAccept() {
   cookiesSettingsClear();
   var cookiesAccepted = [];
-  document
+  var inputChecked = document
     .querySelectorAll(".section__cookies__checkbox input:checked")
-    .forEach(function(checkbox) {
-      document
-        .querySelectorAll("script[data-name=" + checkbox.name + "]")
-        .forEach(function(script) {
-          script.setAttribute("data-cookies", "accepted");
+    for ( var i = 0, arrInputCheckedLength = inputChecked.length; i < arrInputCheckedLength; i++ ) {
+      (function() {
+      var checkboxNames = document
+        .querySelectorAll("script[data-name=" + inputChecked[i].name + "]")
+        for ( var j = 0, arrCheckboxNamesLength = checkboxNames.length; j < arrCheckboxNamesLength; j++ ) {
+          (function() {
+          checkboxNames[j].setAttribute("data-cookies", "accepted");
         });
+      }
       cookiesAccepted.push(checkbox.name);
     });
+  }
   var cookiesTemp = false;
 
   if (cookiesAccepted.length === 3) {
