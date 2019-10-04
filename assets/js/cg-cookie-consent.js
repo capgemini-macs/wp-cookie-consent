@@ -77,18 +77,18 @@ var cookiePopupTemplate = window.lodash.template(
     for (var i = 1; i < cookiesNames.length; i++) {
       if (getCookie(cookiesNames[i]) !== null) {
         if (cookiesNames[i] === 'cookies_all') {
-          document.querySelectorAll("script[data-name='cookie_necessary']").forEach(function (script) {
-            script.setAttribute('data-cookies', 'accepted')
+          $("script[data-name='cookie_necessary']").each(function () {
+            $(this).setAttribute('data-cookies', 'accepted')
           })
-          document.querySelectorAll("script[data-name='cookie_preferences']").forEach(function (script) {
-            script.setAttribute('data-cookies', 'accepted')
+          $("script[data-name='cookie_preferences']").each(function () {
+            $(this).setAttribute('data-cookies', 'accepted')
           })
-          document.querySelectorAll("script[data-name='cookie_statistics']").forEach(function (script) {
-            script.setAttribute('data-cookies', 'accepted')
+          $("script[data-name='cookie_statistics']").each(function () {
+            $(this).setAttribute('data-cookies', 'accepted')
           })
         } else {
-          document.querySelectorAll('script[data-name=' + cookiesNames[i] + ']').forEach(function (script) {
-            script.setAttribute('data-cookies', 'accepted')
+          $('script[data-name=' + cookiesNames[i] + ']').each(function () {
+            $(this).setAttribute('data-cookies', 'accepted')
           })
         }
       }
@@ -99,9 +99,9 @@ var cookiePopupTemplate = window.lodash.template(
 
 // setting declined for all
 function cookiesSettingsClear () {
-  document.querySelectorAll('.section__cookies__checkbox input').forEach(function (checkbox) {
-    document.querySelectorAll('script[data-name=' + checkbox.name + ']').forEach(function (script) {
-      script.setAttribute('data-cookies', 'declined')
+  $('.section__cookies__checkbox input').each(function () {
+    $('script[data-name=' + $(this).name + ']').each(function () {
+      $(this).setAttribute('data-cookies', 'declined')
     })
   })
 }
