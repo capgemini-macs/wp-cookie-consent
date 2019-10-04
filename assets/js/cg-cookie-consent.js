@@ -16,7 +16,6 @@ function cookieExists (name) {
 }
 
 function runCookiesPlugin () {
-
 var cookiePopupTemplate = window.lodash.template(
               '<div id="cookiePopup" class="section__cookies" tabindex="-1"> \
                 <div class="section__cookies__container dialog" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description"> \
@@ -77,17 +76,17 @@ var cookiePopupTemplate = window.lodash.template(
     for (var i = 1; i < cookiesNames.length; i++) {
       if (getCookie(cookiesNames[i]) !== null) {
         if (cookiesNames[i] === 'cookies_all') {
-          $("script[data-name='cookie_necessary']").each(function () {
+          $("script[data-name='cookie_necessary']").each(function (script) {
             $(this).setAttribute('data-cookies', 'accepted')
           })
-          $("script[data-name='cookie_preferences']").each(function () {
+          $("script[data-name='cookie_preferences']").each(function (script) {
             $(this).setAttribute('data-cookies', 'accepted')
           })
-          $("script[data-name='cookie_statistics']").each(function () {
+          $("script[data-name='cookie_statistics']").each(function (script) {
             $(this).setAttribute('data-cookies', 'accepted')
           })
         } else {
-          $('script[data-name=' + cookiesNames[i] + ']').each(function () {
+          $('script[data-name=' + cookiesNames[i] + ']').each(function (script) {
             $(this).setAttribute('data-cookies', 'accepted')
           })
         }
@@ -110,11 +109,11 @@ function cookiesSettingsClear () {
 function cookiesAccept () {
   cookiesSettingsClear()
   var cookiesAccepted = []
-  document.querySelectorAll('.section__cookies__checkbox input:checked').forEach(function (checkbox) {
-    document.querySelectorAll('script[data-name=' + checkbox.name + ']').forEach(function (script) {
-      script.setAttribute('data-cookies', 'accepted')
+  $('.section__cookies__checkbox input:checked').each(function () {
+    $('script[data-name=' + $(this).name + ']').each(function () {
+      $(this).setAttribute('data-cookies', 'accepted')
     })
-    cookiesAccepted.push(checkbox.name)
+    cookiesAccepted.push($(this).name)
   })
   var cookiesTemp = false
   if (cookiesAccepted.length === 3) {
@@ -139,16 +138,15 @@ function runScripts () {
   const scripts = document.querySelectorAll('script[type="text/plain"]')
   let customDataLayer = {}
   window.dataLayer = window.dataLayer || []
-  for (let script of scripts) {
-    if (script.getAttribute('data-cookies') === 'accepted') {
+  $(scripts).each( function() {
+    if ($(this).getAttribute('data-cookies') === 'accepted') {
       const oScript = document.createElement('script')
-      const oScriptText = document.createTextNode(script.text)
+      const oScriptText = document.createTextNode($(this).text)
       oScript.appendChild(oScriptText)
       document.body.appendChild(oScript)
-      customDataLayer = _.merge( customDataLayer, window.dataLayerItems[script.getAttribute('data-name')])
+      customDataLayer = _.merge( customDataLayer, window.dataLayerItems[$(this).getAttribute('data-name')])
     }
-  }
-
+  })
   // push custom layers to GTM
   window.dataLayer.push(customDataLayer)
 }
