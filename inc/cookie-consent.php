@@ -113,7 +113,7 @@ add_action(
 	function () {
 		wp_enqueue_style( 'cookie-consent', esc_url( plugin_dir_url( __FILE__ ) ) . '../assets/css/cg-cookie-consent.css', [], false );
 		wp_enqueue_script( 'cookie-consent-js', esc_url( plugin_dir_url( __FILE__ ) ) . '../assets/js/cg-cookie-consent.js', [ 'lodash', 'jquery' ], '1.2.0' );
-		wp_add_inline_script( 'cookie-consent-js', 'window.onload = runCookiesPlugin', 'after' );
+		wp_add_inline_script( 'cookie-consent-js', 'window.onload = window.runCookiesPlugin', 'after' );
 		$fm_cookie_fields = get_option( 'cg_cookie', [] );
 
 		if ( ! empty( $fm_cookie_fields['cookie-title'] ) ) {
