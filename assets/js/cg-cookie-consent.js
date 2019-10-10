@@ -17,7 +17,7 @@ function cookieExists (name) {
 
 function runCookiesPlugin () {
 
-var cookiePopupTemplate = window.lodash.template(
+  var cookiePopupTemplate = window.lodash.template(
               '<div id="cookiePopup" class="section__cookies" tabindex="-1"> \
                 <div class="section__cookies__container dialog" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description"> \
                   <h2 id="dialog-title" class="section__title col-12"><%- title %></h2> \
@@ -140,7 +140,6 @@ function runScripts () {
   let customDataLayer = {}
   window.dataLayer = window.dataLayer || []
   $(scripts).each(function () {
-    console.log(this)
     if (this.getAttribute('data-cookies') === 'accepted') {
       const oScript = document.createElement('script')
       const oScriptText = document.createTextNode(this.text)
