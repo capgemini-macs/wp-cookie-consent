@@ -1,0 +1,292 @@
+#cookiePopup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(102, 102, 102, 0.85);
+  transition: opacity 500ms;
+  z-index: 99999;
+  visibility: hidden;
+}
+.section__cookies__container {
+  padding: 3rem;
+  background: #fff;
+  width: 556px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 767px) {
+  .section__cookies__container {
+    width: 380px;
+    padding: 2rem;
+    max-width: 100%;
+  }
+}
+
+.cookieConsent__overlay.overlay-on{
+  display: none;
+  background: #131313;
+  opacity: .8;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 19;
+}
+
+.cookieConsent__popup {
+  background-color: #f3f3f3;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 20;
+  padding: 24px;
+  display:none;
+}
+.cookieConsent__popup .cookieConsent__popup--close {
+  display: block;
+  background: none;
+  width: 40px;
+  height: 40px;
+  border: none;
+  text-align: center;
+  padding-top: 5px;
+  font-size: 26px;
+  color: #2b0a3d;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+.cookieConsent__popup .cookieConsent__popup--close:before {
+  font-family: "wcms-icons" !important;
+  font-style: normal !important;
+  font-weight: bold !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\65";
+}
+.cookieConsent__popup .cookieConsent__popup--close:hover, .cookieConsent__popup .cookieConsent__popup--close:focus {
+  border: 2px solid #2b0a3d;
+  border-radius: 50%;
+}
+.cookieConsent__popup .cookieConsent__popup--close.button-on{
+  display: none;
+}
+.cookieConsent__popup .cookieConsent__popup--title {
+  font: 24px/1.5 "ubuntu-bd", Verdana, Arial, sans-serif;
+  color: #2b0a3d;
+  margin-bottom: 24px;
+}
+.cookieConsent__popup .cookieConsent__popup--text {
+  font: 14px/1.5 "ubuntu", Verdana, Arial, sans-serif;
+  color: #2b0a3d;
+  margin-bottom: 24px;
+}
+.cookieConsent__popup .cookieConsent__popup--buttons {
+  display: flex;
+  flex-direction: column;
+}
+.cookieConsent__popup .cookieConsent__popup--buttons .cookieConsent__popup--buttons_button {
+  margin-bottom: 16px;
+  display: inline-block;
+  font: .9rem/1 "ubuntu", Verdana, Arial, sans-serif;
+  min-width: 185px;
+  border-radius: 100px;
+  text-align: center;
+  transition: all 0.5s ease;
+  padding: 12px;
+  color: #0070ad;
+  border: 2px solid #0070ad;
+  line-height: 18px;
+  background: transparent;
+}
+.cookieConsent__popup .cookieConsent__popup--buttons .cookieConsent__popup--buttons_button:hover, .cookieConsent__popup .cookieConsent__popup--buttons .cookieConsent__popup--buttons_button:focus {
+  background: #0070ad;
+  color: white;
+  border-color: #0070ad;
+}
+.cookieConsent__popup .cookieConsent__popup--buttons .cookieConsent__popup--buttons_text {
+  text-align: center;
+}
+
+.cookieConsent__popup--buttons_text {
+  font-size:.9rem;
+}
+
+.cookieConsent__table {
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .cookieConsent__table {
+    overflow: scroll;
+  }
+}
+
+.cookieConsent__table table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.cookieConsent__table tr:first-child {
+  border-bottom: none;
+}
+.cookieConsent__table th {
+  padding: 16px 24px;
+  width: 20%;
+  background-color: #f3f3f3;
+  color: #666666;
+  font: 14px/1.857 "ubuntu-bd", Verdana, Arial, sans-serif;
+  text-align: left;
+}
+.cookieConsent__table th:nth-child(3) {
+  width: 40%;
+}
+.cookieConsent__table td {
+  width: 20%;
+  padding: 16px 24px;
+  font: 14px/1.857 "ubuntu", Verdana, Arial, sans-serif;
+  border-bottom: 1px solid #666666;
+  color: black;
+  vertical-align: top;
+}
+.cookieConsent__table td:nth-child(3) {
+  width: 40%;
+}
+.cookieConsent__table td ul {
+  padding-top: 16px;
+}
+.cookieConsent__table td ul li {
+  font: 14px/1.857 "ubuntu", Verdana, Arial, sans-serif;
+}
+
+.cookieConsent__checkbox_container {
+  display: flex;
+  flex-direction: column;
+}
+.cookieConsent__checkbox_container .cookieConsent__checkbox {
+  margin-left: 0;
+  position: relative;
+  display: block;
+}
+.cookieConsent__checkbox_container .cookieConsent__checkbox input[type=checkbox] {
+  opacity: 0;
+  position: absolute;
+  box-sizing: border-box;
+  padding: 0;
+  overflow: visible;
+  z-index: 10;
+  left: 5px;
+  top: 3px;
+}
+.cookieConsent__checkbox_container .cookieConsent__checkbox:before {
+  display: none;
+}
+.cookieConsent__checkbox_container .cookieConsent__checkbox input + label {
+  font-size: 13px;
+  cursor: pointer;
+  position: static;
+  display: inline-block;
+  color: #666;
+}
+.cookieConsent__checkbox_container .cookieConsent__checkbox_title {
+  font: 18px/1.857 "ubuntu-md", Verdana, Arial, sans-serif !important;
+  cursor: pointer;
+  position: static;
+  display: inline-block;
+  color: black;
+}
+.cookieConsent__checkbox_container .cookieConsent__checkbox_text {
+  font-size: 13px;
+  cursor: pointer;
+  position: static;
+  display: inline-block;
+  color: #666;
+  margin-left: 45px;
+  margin-bottom: 24px;
+}
+.cookieConsent__checkbox_container .cookieConsent__checkbox input + label::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  border: 1px solid #000;
+  box-shadow: 5px 5px 0 0 rgba(43, 10, 61, 0.2);
+  font-size: 1.25rem;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: 1px;
+  margin-right: 16px;
+  margin-bottom: 5px;
+  transition: 0.5s all;
+}
+.cookieConsent__checkbox_container .cookieConsent__checkbox input:checked + label::before {
+  content: "";
+  border: 1px solid #000;
+  box-shadow: 5px 5px 0 0 rgba(43, 10, 61, 0.2), inset 0 0 0 5px #fff;
+  background: #2b0a3d;
+}
+
+.cookie_section h2,
+.cookie_section .article-text h2 {
+  color: #2b0a3d;
+  font: 1.75rem/1.33 "ubuntu-md", Verdana, Arial, sans-serif;
+  margin-bottom: 48px;
+}
+
+.cookie_section h2::after,
+.cookie_section .article-text h2::after {
+  content: '';
+  display: block;
+  margin-top: 8px;
+  width: 48px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #2b0a3d;
+}
+
+.article-text span.macs_cookies_saved,
+span.macs_cookies_saved {
+  margin-left: 10px;
+  color: #7CB342!important;
+  display:none;
+}
+
+@media (min-width: 576px) {
+  .cookie_section h2,
+  .cookie_section .article-text h2 {
+    font: 2.25rem/1.33 "ubuntu-md", Verdana, Arial, sans-serif;
+  }
+}
+
+@media (max-width: 576px) {
+  .cookieConsent__popup .cookieConsent__popup--text {
+		max-height: 30vh;
+		min-height: 80px;
+		overflow: auto;
+	}
+	.cookieConsent__popup .cookieConsent__popup--buttons .cookieConsent__popup--buttons_button {
+		margin-bottom: 10px;
+		padding: 14px;
+	}
+	.cookieConsent__popup--buttons_text {
+		font-size:.8rem;
+		line-height: 1.25;
+	}
+}
+
+.embed_placeholder {
+  background-color: #f3f3f3;
+  padding: 10px;
+  margin: 10px;
+}
+
