@@ -1,0 +1,24 @@
+{
+	"name": "capgemini-macs/macs-cookie-consent",
+	"description": "GDPR compliant cookie consent plugin",
+	"homepage": "https://github.com/capgemini-macs/wp-cookie-consent",
+	"keywords": [
+		"wordpress"
+	],
+	"license": "GPL-2.0+",
+	"authors": [
+		{
+			"name":"Capgemini MACS",
+			"email":"edge-support.global@capgemini.com",
+			"homepage":"http://capgemini.com/"
+		}
+	],
+	"support"    : {
+			"issues": "https://github.com/capgemini-macs/wp-cookie-consent/issues",
+			"source": "https://github.com/capgemini-macs/wp-cookie-consent"
+	},
+	"type": "wordpress-plugin",
+	"require": {
+		"composer/installers": "~1.0"
+	 }
+}
