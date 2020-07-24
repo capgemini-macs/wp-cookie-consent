@@ -1,0 +1,196 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Project-Id-Version: MACS Cookie Consent\n"
+"POT-Creation-Date: 2020-07-02 15:57+0200\n"
+"PO-Revision-Date: 2020-07-02 16:01+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: macs-cookie-content.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: \n"
+"Language: fr\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#. translators: %s is cookie type name i.e. 'Functional Cookies'
+#: src/CookiesUIElements/Checkbox.php:34
+#, php-format
+msgid "I accept \"%s\""
+msgstr "J'accepte \"%s\""
+
+#: src/CookiesUIElements/CookieTable.php:105
+msgid "Cookie name"
+msgstr "Nom"
+
+#: src/CookiesUIElements/CookieTable.php:106 src/Fields/CookieDomain.php:22
+msgid "Domain"
+msgstr "Domaine"
+
+#: src/CookiesUIElements/CookieTable.php:107
+#: src/Fields/CookieDescription.php:26
+msgid "Description"
+msgstr "Description"
+
+#: src/CookiesUIElements/CookieTable.php:108
+msgid "Expiry Date"
+msgstr "Date d'expiration"
+
+#: src/Fields/CookieExpiry.php:22
+msgid "Expiry"
+msgstr "Date d’expiration"
+
+#: src/PostType.php:30
+msgid "Cookie"
+msgstr "Cookie"
+
+#: src/PostType.php:31
+msgid "Cookie Item"
+msgstr "Article Cookie"
+
+#: src/PostType.php:33
+msgctxt "Post Type General Name"
+msgid "Cookies"
+msgstr "Cookies"
+
+#: src/PostType.php:34
+msgctxt "Post Type Singular Name"
+msgid "Cookie"
+msgstr "Cookie"
+
+#: src/Settings/CookiePagesSettings.php:26
+msgid "Cookie Pages Setup"
+msgstr "Configuration des pages Cookie"
+
+#: src/Settings/CookiePagesSettings.php:41 src/Templates/cookie-policy.php:18
+msgid "Cookie Policy"
+msgstr "Politique de Cookies"
+
+#: src/Settings/CookiePagesSettings.php:63
+msgid "User Preferences Page"
+msgstr "Page préférences de l’utilisateur"
+
+#: src/Settings/CookiePagesSettings.php:97
+msgid "Popup"
+msgstr "Popup"
+
+#: src/Settings/CookiePagesSettings.php:119
+msgid "Full Screen Overlay"
+msgstr ""
+
+#: src/Settings/CookiePagesSettings.php:129
+msgid "Hide close button"
+msgstr ""
+
+#: src/Settings/CookiePluginSettings.php:29
+msgid "Cookie Plugin Setup"
+msgstr ""
+
+#: src/Settings/CookiePluginSettings.php:46
+msgid "GTM Containers"
+msgstr ""
+
+#: src/Settings/CookiePluginSettings.php:76
+msgid "Google Analytics Identifier (for page views only)"
+msgstr ""
+
+#: src/Settings/CookiePluginSettings.php:77
+msgid ""
+"Add Google Analytics Identifier to track only page hits with no other "
+"personal data with GA script"
+msgstr ""
+
+#: src/Settings/CookiePluginSettings.php:82
+msgid "Cookie Policy Version"
+msgstr ""
+
+#: src/Settings/CookiePluginSettings.php:89
+msgid "Plugin status"
+msgstr ""
+
+#: src/Taxonomy.php:34
+msgctxt "Taxonomy General Name"
+msgid "Cookie Type"
+msgstr "Cookie Type"
+
+#: src/Taxonomy.php:35
+msgctxt "Taxonomy Singular Name"
+msgid "Cookie Type"
+msgstr "Cookie Type"
+
+#: src/Taxonomy.php:36
+msgid "Cookie Type"
+msgstr "Cookie Type"
+
+#: src/Taxonomy.php:74
+msgid "Order"
+msgstr ""
+
+#: src/Templates/cookie-popup.php:22
+msgid "Allow all cookies"
+msgstr "Autoriser tous les cookies"
+
+#: src/Templates/cookie-popup.php:23
+msgid "Manage cookie settings"
+msgstr "Paramètres de cookie"
+
+#: src/Templates/cookie-popup.php:24
+msgid "Decline all cookies"
+msgstr "Bloquer tous les cookies"
+
+#: src/Templates/cookie-popup.php:28
+msgid "Accept only necessary cookies and close window"
+msgstr "Accepter uniquement les cookies nécessaires et fermer la fenêtre"
+
+#: src/Templates/cookie-user-preferences.php:18
+msgid "Cookie settings"
+msgstr "Paramètres de cookie"
+
+#: src/Templates/cookie-user-preferences.php:33
+msgid "Set-up your preferences"
+msgstr "Paramétrez vos préférences"
+
+#: src/Templates/cookie-user-preferences.php:43
+msgid "Save my settings"
+msgstr "Enregistrer mes paramètres"
+
+#: src/Templates/cookie-user-preferences.php:43
+msgid "Settings saved!"
+msgstr "Paramètres sauvegardés!"
+
+#: src/Templates/cookie-user-preferences.php:46
+msgid "Other non-cookie technologies"
+msgstr "Technologies autres que les cookies"
+
+#: src/Templates/cookie-user-preferences.php:54
+#, php-format
+msgid ""
+"For more information related to the cookies, please visit our <a href=\"%s"
+"\">cookie policy</a>"
+msgstr ""
+"Pour plus d’informations sur les cookies, veuillez consulter notre <a href="
+"\"%s\">politique sur les cookies</a>"
+
+#. Plugin Name of the plugin/theme
+msgid "MACS Cookie Consent"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/wpcomvip/capgemini"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Cookie Consent plugin for GTM based setup."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Lech Dulian, Elżbieta Wróbel (Capgemini MACS PL)"
+msgstr ""
