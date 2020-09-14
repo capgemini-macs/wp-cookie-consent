@@ -138,8 +138,9 @@ function load_translations(): void {
  * @return bool
  */
 function check_requirements(): bool {
+
 	// Check if FieldManager Exists
-	if ( ! class_exists( 'Fieldmanager_Field', false ) ) {
+	if ( ! defined( '\FM_VERSION' ) ) {
 		return false;
 	}
 	return true;
