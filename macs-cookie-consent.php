@@ -13,7 +13,7 @@
  * Plugin Name:       MACS Cookie Consent
  * Plugin URI:        https://github.com/wpcomvip/capgemini
  * Description:       Cookie Consent plugin for GTM based setup.
- * Version:           0.1.0
+ * Version:           2.1.1
  * Author:            Lech Dulian, Elżbieta Wróbel (Capgemini MACS PL)
  * Text Domain:       macs_cookies
  * License:           GPL-2.0-or-later
