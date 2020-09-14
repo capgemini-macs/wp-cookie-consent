@@ -42,4 +42,9 @@ class Popup extends BaseContext {
 		$data = $this->data['button'] ?: '';
 		echo esc_attr( $data );
 	}
+
+	public function render_decline(): void {
+		$data = $this->data['decline'] ?: '';
+		echo esc_attr( $data );
+	}
 }

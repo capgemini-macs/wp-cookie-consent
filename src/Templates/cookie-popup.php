@@ -21,7 +21,7 @@ $context = new CookiePopup();
 			<div class="cookieConsent__popup--buttons col-12 col-lg-3">
 				<a href="<?php echo esc_url( home_url() ); ?>" id="macs_cookies_accept_all" class="macs_cookies_accept_all cookieConsent__popup--buttons_button" target="_self"><?php esc_html_e( 'Allow all cookies', 'macs_cookies' ); ?></a>
 				<a href="<?php echo esc_url( home_url( 'cookie-settings' ) ); ?>" id="" class="cookieConsent__popup--buttons_button" target="_self"><?php esc_html_e( 'Manage cookie settings', 'macs_cookies' ); ?></a>
-				<a href="<?php echo esc_url( home_url() ); ?>" id="macs_cookies_accept_necessary" class="macs_cookies_accept_necessary cookieConsent__popup--buttons_button" target="_self"><?php esc_html_e( 'Decline all cookies', 'macs_cookies' ); ?></a>
+				<a href="<?php echo esc_url( home_url() ); ?>" id="macs_cookies_accept_necessary" class="macs_cookies_accept_necessary cookieConsent__popup--buttons_button <?php $context->render_decline(); ?>" target="_self"><?php esc_html_e( 'Decline all cookies', 'macs_cookies' ); ?></a>
 			</div>
 		</div>
 	</div>

@@ -118,8 +118,8 @@ class CookiePagesSettings {
 								[
 									'label'         => __( 'Full Screen Overlay', 'macs_cookies' ),
 									'options'       => [
-										'overlay-off' => 'Off',
-										'overlay-on'  => 'On',
+										'overlay-off' => __( 'Off', 'macs_cookies' ),
+										'overlay-on'  => __( 'On', 'macs_cookies' ),
 									],
 									'default_value' => 'overlay-off',
 								]
@@ -128,10 +128,20 @@ class CookiePagesSettings {
 								[
 									'label'         => __( 'Hide close button', 'macs_cookies' ),
 									'options'       => [
-										'button-off' => 'Off',
-										'button-on'  => 'On',
+										'button-off' => __( 'Off', 'macs_cookies' ),
+										'button-on'  => __( 'On', 'macs_cookies' ),
 									],
 									'default_value' => 'button-off',
+								]
+							),
+							'decline'         => new Fieldmanager_Radios( 
+								[
+									'label'         => __( 'Hide "Decline All" button', 'macs_cookies' ),
+									'options'       => [
+										'decline-off' => __( 'Off', 'macs_cookies' ),
+										'decline-on'  => __( 'On', 'macs_cookies' ),
+									],
+									'default_value' => 'decline-off',
 								]
 							),
 

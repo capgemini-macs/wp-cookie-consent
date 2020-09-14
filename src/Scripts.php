@@ -23,11 +23,13 @@ class Scripts {
 		wp_enqueue_script( 'macs-cookies-es5', MACS_COOKIE_CONSENT_URL . '/assets/js/macs-cookies-es5.js', [ 'jquery', 'lodash' ], MACS_COOKIE_CONSENT_JS_VER, true );
 
 		wp_localize_script( 
-			'macs-cookies-es5', 
-			'MACS_COOKIES', 
+			'macs-cookies-es5',
+			'MACS_COOKIES',
 			[
 				'coookiePolicyVersion' => Plugin::get_policy_version(),
 				'ID'                   => crc32( get_site_url() ),
+				'embedCookiesYtb'      => esc_html__( 'Please allow statistical cookies to see this Youtube embed', 'macs_cookies' ),
+				'embedCookiesSnd'      => esc_html__( 'Please allow statistical cookies to see this Soundcloud embed', 'macs_cookies' ),
 			]
 		);
 		

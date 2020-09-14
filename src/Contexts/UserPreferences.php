@@ -41,7 +41,15 @@ class UserPreferences extends BaseContext {
 
 		$args = [
 			'taxonomy'   => Taxonomy::SLUG,
+			'order'      => 'ASC',
+			'orderby'    => 'cookie_order',
 			'hide_empty' => false,
+			'meta_query' => [ // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+				'cookie_order' => [
+					'key'  => 'cookie_type_order',
+					'type' => 'NUMERIC',
+				],
+			],
 		];
 
 		// exclude 'necessary' type to re-insert it later as first element of cookie types list
