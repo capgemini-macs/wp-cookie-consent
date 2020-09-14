@@ -123,6 +123,10 @@
   font-size:.9rem;
 }
 
+.macs_cookies_accept_necessary.cookieConsent__popup--buttons_button.decline-on{
+  display: none;
+}
+
 .cookieConsent__table {
   width: 100%;
 }
