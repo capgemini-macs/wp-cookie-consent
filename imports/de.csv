@@ -1,0 +1,93 @@
+cookie_info,Domäne,Beschreibung,Kategorie,Cookie Typ,Verfallsdatum
+__aza_perm,Azalead Publisher,,Azalead Publisher,Marketing,1 Jahr
+__Secure-3PAPISID,.google.com,"Wird von Google zum Targeting verwendet, um ein Profil der Interessen der Website-Besucher zu erstellen und relevante und personalisierte Google-Werbung anzuzeigen",Google,Marketing,1 Jahr 10 Monate 24 Tage
+__Secure-3PSID,.google.com,"Wird von Google zum Targeting verwendet, um ein Profil der Interessen der Website-Besucher zu erstellen und relevante und personalisierte Google-Werbung anzuzeigen",Google,Marketing,1 Jahr 11 Monate 27 Tage
+__Secure-APISID,.google.com,"Wird von Google zum Targeting verwendet, um ein Profil der Interessen der Website-Besucher zu erstellen und relevante und personalisierte Google-Werbung anzuzeigen",Google,Marketing,6 Monate 17 Tage
+__Secure-HSID,.google.com,"Wir verwenden Sicherheitscookies, um Benutzer zu authentifizieren, die betrügerische Verwendung von Anmeldeinformationen zu verhindern und Benutzerdaten vor unbefugten Personen zu schützen",Google,Notwendig,6 Monate 17 Tage
+__Secure-SSID,.google.com,"Wir verwenden Sicherheitscookies, um Benutzer zu authentifizieren, die betrügerische Verwendung von Anmeldeinformationen zu verhindern und Benutzerdaten vor unbefugten Personen zu schützen",Google,Notwendig,6 Monate 17 Tage
+__utma,.capgemini.com,"Cookie wird verwendet, um Benutzer und Sitzungen zu unterscheiden. Das Cookie wird erstellt, wenn die Javascript-Bibliothek ausgeführt wird und keine vorhandenen __utma-Cookies vorhanden sind. Das Cookie wird jedes Mal aktualisiert, wenn Daten an Google Analytics gesendet werden.",Google Analytics,Statistiken,1 Jahr 11 Monate 24 Tage
+__utmv,.capgemini.com,"Wird zum Speichern von benutzerdefinierten Variablendaten auf Besucherebene verwendet. Dieses Cookie wird erstellt, wenn ein Entwickler die _setCustomVar-Methode mit einer benutzerdefinierten Variablen auf Besucherebene verwendet. Dieses Cookie wurde auch für die veraltete Methode _setVar verwendet. Das Cookie wird jedes Mal aktualisiert, wenn Daten an Google Analytics gesendet werden.",Google Analytics,Statistiken,1 Jahr 11 Monate 24 Tage
+__utmz,.capgemini.com,"Cookie speichert die Quelle oder Kampagne, die erklärt, wie der Benutzer unsere Website erreicht hat. Das Cookie wird erstellt, wenn die Javascript-Bibliothek ausgeführt wird, und wird jedes Mal aktualisiert, wenn Daten an Google Analytics gesendet werden.",Google Analytics,Statistiken,5 Monate 24 Tage
+_fbp,.capgemini.com,"Wird von Facebook verwendet, um eine Reihe von Werbeprodukten zu liefern, z. B. Echtzeit-Gebote von Werbe-Drittanbietern",facebook,Marketing,2 Monate 30 Tage
+_fbp,Facebook,"Wird von Facebook verwendet, um eine Reihe von Werbeprodukten zu liefern, z. B. Echtzeit-Gebote von Werbe-Drittanbietern.",Facebook,Marketing,3 Monate
+_ga,.capgemini.com,"wird verwendet, um Benutzer zu unterscheiden.",Google Analytics,Statistiken,1 Jahr 11 Monate 30 Tage
+_ga,Google Analytics,"Registriert eine eindeutige ID, mit der statistische Daten darüber generiert werden, wie der Besucher die Website nutzt.",Google Analytics,Statistiken,2 Jahre
+_gac_UA-105264421-1,.capgemini.com,"Enthält kampagnenbezogene Informationen für den Benutzer. Wenn Sie Ihre Google Analytics- und Google Ads-Konten verknüpft haben, lesen die Conversion-Tags der Google Ads-Website dieses Cookie, sofern Sie sich nicht abmelden.",Google Analytics,Marketing,2 Monate 3 Tage
+_gac_UA-105331519-21,.capgemini.com,"Enthält kampagnenbezogene Informationen für den Benutzer. Wenn Sie Ihre Google Analytics- und Google Ads-Konten verknüpft haben, lesen die Conversion-Tags der Google Ads-Website dieses Cookie, sofern Sie sich nicht abmelden.",Google Analytics,Marketing,2 Monate 3 Tage
+_gat,Google Analytics,"Wird von Google Analytics verwendet, um die Anforderungsrate zu drosseln",Google Analytics,Notwendig,1 Tag
+_gat_UA-105264421-1,.capgemini.com,"Enthält kampagnenbezogene Informationen für den Benutzer. Wenn Sie Ihre Google Analytics- und Google Ads-Konten verknüpft haben, lesen die Conversion-Tags der Google Ads-Website dieses Cookie, sofern Sie sich nicht abmelden.",Google Analytics,Marketing,0 Tage
+_gat_UA-105331519-1,.capgemini.com,"Enthält kampagnenbezogene Informationen für den Benutzer. Wenn Sie Ihre Google Analytics- und Google Ads-Konten verknüpft haben, lesen die Conversion-Tags der Google Ads-Website dieses Cookie, sofern Sie sich nicht abmelden.",Google Analytics,Marketing,0 Tage
+_gcl_au,.capgemini.com,"Wird von Google AdSense verwendet, um die Werbeeffizienz auf den Websites anzupassen, die ihre Dienste nutzen",Google AdSense,Marketing,15 Tage
+_gcl_au,Google AdSense,"Wird von Google AdSense verwendet, um die Werbeeffizienz auf den Websites anzupassen, die ihre Dienste nutzen. Dies ist das First-PartyCookie für die Funktion ""Conversion Linker"". Es nimmt Informationen in Anzeigenklicks auf und speichert sie in einem First-Party-Cookie, sodass Conversions außerhalb der Landing Page zugeordnet werden können.",Google AdSense,Marketing,3 Monate
+_gcl_aw,.capgemini.com,"Wird von Google AdSense verwendet, um die Werbeeffizienz auf den Websites anzupassen, die ihre Dienste nutzen",Google AdSense,Marketing,2 Monate 3 Tage
+_gid,.capgemini.com,"wird verwendet, um Benutzer zu unterscheiden.",Google Analytics,Statistiken,1 Tage
+_gid,Google Analytics,"Registriert eine eindeutige ID, mit der statistische Daten darüber generiert werden, wie der Besucher die Website nutzt.",Google Analytics,Statistiken,1 Tag
+_hjid,.capgemini.com,"Hotjar-Cookie. Dieses Cookie wird gesetzt, wenn der Kunde zum ersten Mal eine Webseite mit dem Hotjar-Skript nutzt. Es wird verwendet, um die zufällige Benutzer-ID beizubehalten, die für diese Website im Browser eindeutig ist. Dadurch wird sichergestellt, dass das Verhalten bei nachfolgenden Besuchen derselben Website derselben Benutzer-ID zugeordnet wird.",Hotjar,Statistiken,9 Monate 7 Tage
+_hjid,Hotjar cookie,Legt eine eindeutige ID für die Sitzung fest. Auf diese Weise kann die Website zu statistischen Zwecken Daten zum Besucherverhalten abrufen.,Hotjar cookie,Statistiken,1 Jahr
+_hjTLDTest,Hotjar cookie,,hotjar,Statistiken,Sitzung
+_pk_id#,MATOMO/Azalead,"Sammelt Statistiken über die Besuche des Benutzers auf der Website, z. B. die Anzahl der Besuche, die durchschnittliche Zeit auf der Website und die gelesenen Seiten.",MATOMO/Azalead,Statistiken,1 Jahr
+_pk_ses#,MATOMO/Azalead,"Wird von der Piwik Analytics-Plattform verwendet, um Seitenanforderungen des Besuchers während der Sitzung zu verfolgen.",MATOMO/Azalead,Statistiken,1 Tag
+1P_JAR,.gstatic.com,"Diese Cookies werden von Google verwendet, um personalisierte Werbung auf Google-Websites basierend auf aktuellen Suchanfragen und früheren Interaktionen anzuzeigen.",Google,Marketing,9 Tage
+act,.facebook.com,"Dies ist ein Facebook-Cookie, das für ihre Analyse und Erforschung verwendet wird",facebook,Marketing,Session
+ads/ga-audiences,Google Adword,"Google Adword wird von Google AdWords verwendet, um mit den Besuchern wieder wieder in Dialog zu treten, die aufgrund des Online-Verhaltens des Besuchers auf verschiedenen Websites wahrscheinlich zu Kunden konvertieren.",Google Adword,Marketing,Session
+ads_prefs,.twitter.com,"Diese Cookies ermöglichen es uns, die Besucheraktivität unserer Twitter-Anzeigen auf unserer Website zu verfolgen und den Benutzern das Teilen von Inhalten unserer Websites zu ermöglichen. Diese Cookies liefern uns keine vertraulichen Informationen zu Ihrem Konto.",twitter,Marketing,4 Jahr 10 Monate 22 Tage
+ANID,.google.com,"Das Cookie ""ANID"" wird für Werbung verwendet, die im Internet geschaltet und auf google.com gespeichert wird.",Google,Marketing,1 Jahr 9 Monate 16 Tage
+APISID,.google.com,"Das Cookie ""APISID"" wird zum Abspielen von auf der Website eingebetteten YouTube-Videos verwendet.",Google,Funktional,1 Jahr 9 Monate 27 Tage
+bcookie,.linkedin.com,Dies ist ein Microsoft MSN-Cookie eines Drittanbieters zum Teilen des Inhalts der Website über soziale Medien.,microsoft,Funktional,1 Jahr 11 Monate 4 Tage
+bcookie,Linkedin,"Wird vom Social-Networking-Dienst LinkedIn verwendet, um die Nutzung eingebetteter Dienste zu verfolgen",Linkedin,Marketing,2 Jahre
+bscookie,Linkedin,"Wird vom Social-Networking-Dienst LinkedIn verwendet, um die Nutzung eingebetteter Dienste zu verfolgen",Linkedin,Marketing,2 Jahre
+c_user,.facebook.com,Das Cookie c_user enthält die Benutzer-ID des aktuell angemeldeten Benutzers.,facebook,Funktional,2 Monate 30 Tage
+CONSENT,.google.com,"Dieses Cookie enthält Informationen darüber, wie der Endbenutzer die Website nutzt, sowie über Werbung, die der Endbenutzer möglicherweise vor dem Besuch dieser Website gesehen hat.",Google,Marketing,17 Jahr 11 Monate 26 Tage
+cookie_info,www.capgemini.com,"Das Cookie-Info-Skript ist ein Javascript, mit dem Benutzer über die Verwendung von Cookies auf Ihrer Website informiert werden",cookieinfo,Notwendig,9 Jahr 10 Monate 25 Tage
+csrf_same_site,.twitter.com,"Hierbei handelt es sich um Twitter-Cookies, die auf Websites mit Twitter-Feeds und / oder Twitter-Freigabefunktionen verwendet werden. Weitere Informationen finden Sie unter https://help.twitter.com/de/rules-and-policies/twitter-cookies",twitter,Funktional,10 Monate 23 Tage
+csrf_same_site_set,.twitter.com,"Hierbei handelt es sich um Twitter-Cookies, die auf Websites mit Twitter-Feeds und / oder Twitter-Freigabefunktionen verwendet werden. Weitere Informationen finden Sie unter https://help.twitter.com/de/rules-and-policies/twitter-cookies",twitter,Funktional,10 Monate 22 Tage
+datr,.facebook.com,"Der Zweck des datr-Cookies besteht darin, den Webbrowser zu identifizieren, mit dem eine Verbindung zu Facebook hergestellt wird, unabhängig vom angemeldeten Benutzer. Dieses Cookie spielt eine Schlüsselrolle bei den Sicherheits- und Integritätsfunktionen von Facebook.",facebook,Funktional,1 Jahr 10 Monate 19 Tage
+dpr,.facebook.com,Dieses Cookie wird von Facebook für die Messung der Website-Performance verwendet.,facebook,Statistiken,7 Tage
+fr,.facebook.com,Cookie wird von Facebook verwendet,facebook,Marketing,2 Monate 30 Tage
+gtm_auth,www.googletagmanager.com,Diese Cookies sammeln analytische Daten über die Nutzung der Website.,gtm,Statistiken,Sitzung
+gtm_debug,www.googletagmanager.com,Diese Cookies sammeln analytische Daten über die Nutzung der Website.,gtm,Statistiken,Sitzung
+gtm_preview,www.googletagmanager.com,Diese Cookies sammeln analytische Daten über die Nutzung der Website.,gtm,Statistiken,Sitzung
+guest_id,.twitter.com,"Dieses Cookie wird von Twitter gesetzt, um den Website-Besucher zu identifizieren und zu verfolgen.",twitter,Marketing,1 Jahr 10 Monate 23 Tage
+HSID,.google.com,ermöglicht Google Benutzerinformationen für von YouTube gehostete Videos zu sammeln.,Google,Marketing,1 Jahr 9 Monate 27 Tage
+i/adsct,Twitter,"Das Cookie wird von Twitter.com verwendet, um die Anzahl der Besucher zu bestimmen, die über Twitter-Werbeinhalte auf die Website zugreifen",Twitter,Marketing,
+IDE,Doubleclick,"Wird von Google DoubleClick verwendet, um die Aktionen des Website-Nutzers nach dem Anzeigen oder Klicken auf eine der Anzeigen des Werbetreibenden zu registrieren und zu melden. Dies dient der Wirksamkeitsmessung einer Anzeige sowie Ausspielen gezielter Anzeigen für den Nutzer",Doubleclick,Marketing,1 Jahr
+JSESSIONID,.nr-data.net,Cookie zum Aufzeichnen der Benutzersitzung.,Google,Notwendig,Sitzung
+JSESSIONID,,Bewahrt den Benutzerstatus über Seitenanforderungen hinweg.,NA,Notwendig,Sitzung
+kdt,.twitter.com,"Dieses Cookie wird in der Regel von Twitter bereitgestellt, um Verweislinks und den Anmeldestatus zu überwachen. Diese sind normalerweise vorhanden, wenn auf der Website ein ""Tweet This"" -Button oder ein anderes Twitter-Widget eingebunden ist.",twitter,Funktional,1 Jahr 5 Monate 25 Tage
+lang,.ads.linkedin.com,Legt das Standardgebiet / die Standardsprache fest,Linkedin,Funktional,Sitzung
+li_sugr,.linkedin.com,Browser Identifier,Linkedin,Funktional,2 Monate 30 Tage
+lidc,.linkedin.com,Wird für das Routing verwendet,Linkedin,Funktional,0 Tage
+lpv95412,Pardot,"Dieses LPV-Cookie soll verhindern, dass Pardot während einer 30-minütigen Sitzung mehrere Seitenaufrufe auf einem einzelnen Asset verfolgt. Wenn ein Besucher beispielsweise eine Zielseite über einen Zeitraum von 30 Minuten mehrmals neu lädt, verhindert dieses Cookie, dass jedes Neuladen als Seitenansicht gezählt wird.",Pardot,Notwendig,1 Tag
+NID,.googletagmanager.com,"Diese Cookies werden von Google verwendet, um personalisierte Werbung auf Google-Websites basierend auf aktuellen Suchanfragen und früheren Interaktionen anzuzeigen.",Google,Marketing,6 Monate 1 Tage
+OGPC,.google.com,Dieses Cookie aktiviert die Funktionalität von Google Maps.,Google,Funktional,19 Tage
+pardot,Pardot,"Ein Session Cookie mit dem Namen ""pardot"" wird in Ihrem Browser festgelegt, während Sie als Benutzer bei Pardot angemeldet sind oder wenn ein Besucher auf ein Formular, eine Zielseite oder eine Seite mit Pardot-Tracking-Code zugreift. Das Cookie kennzeichnet eine aktive Sitzung und wird nicht zum Verfolgen verwendet.",Pardot,Notwendig,Sitzung
+personalization_id,.twitter.com,Dieses Cookie wird aufgrund der Twitter-Integrations- und Freigabefunktionen für die sozialen Medien gesetzt.,twitter,Marketing,1 Jahr 9 Monate 16 Tage
+piwik.php,MATOMO/Azalead,"Sammelt Statistiken über die Benutzerbesucheauf der Website, z. B. die Anzahl der Besuche, die durchschnittliche Zeit auf der Website und die gelesenen Seiten",MATOMO/Azalead,Marketing,Sitzung
+presence,.facebook.com,"Das Presence-Cookie wird verwendet, um den Chat-Status des Benutzers zu enthalten.",facebook,Funktional,Sitzung
+r/collect,Note Sure,"Dieses Cookie wird verwendet, um Daten über das Gerät und das Verhalten des Besuchers an Google Analytics zu senden. Es trackt den Besucher über Geräte und Marketingkanäle hinweg.",Note Sure,Marketing,Sitzung
+remember_checked_on,.twitter.com,"Dieses Cookie wird in der Regel von Twitter bereitgestellt, um Verweislinks und den Anmeldestatus zu überwachen. Sie sind normalerweise vorhanden, wenn auf der Website ein ""Tweet This"" -Button oder ein anderes Twitter-Widget vorhanden ist.",twitter,Funktional,4 Jahre 11 Monate 24 Tage
+rweb_optin,.twitter.com,Cookie wird von Twitter verwendet,twitter,Marketing,10 Monate 23 Tage
+rxVisitor,.capgemini.com,"wird von Dynatrace verwendet, um die <visitorID> zu verfolgen",Dynatrace,Funktional,1 Jahr 9 Monate 28 Tage
+SAPISID,.google.com,ermöglicht Google Benutzerinformationen für von YouTube gehostete Videos zu sammeln.,Google,Marketing,1 Jahr 9 Monate 27 Tage
+sb,.facebook.com,Cookie wird von Facebook verwendet,facebook,Marketing,1 Jahr 10 Monate 19 Tage
+sc_anonymous_id,.soundcloud.com,"Diese Cookies werden im Allgemeinen für Analytics verwendet und helfen zu zählen, wie viele Personen eine bestimmte Website besuchen, indem sie nachverfolgen, ob Sie diese zuvor besucht haben",soundcloud,Statistiken,9 Jahre 10 Monate 15 Tage
+SEARCH_SAMESITE,.google.com,"Ermöglichen Servern, das Risiko von Angriffen durch CSRF und Informationslecks zu verringern, indem Sie sicherstellen, dass ein bestimmtes Cookie nur mit Anforderungen gesendet werden soll, die von derselben registrierbaren Domäne initiiert wurden.",Google,Notwendig,5 Monate 2 Tage
+SID,.google.com,"Diese Cookies werden von Google verwendet, um personalisierte Werbung auf Google-Websites basierend auf aktuellen Suchanfragen und früheren Interaktionen anzuzeigen.",Google,Marketing,1 Jahr 11 Monate 27 Tage
+SIDCC,.google.com,"Dieses Cookie enthält Informationen darüber, wie der Endbenutzer die Website nutzt, sowie über Werbung, die der Endbenutzer möglicherweise vor dem Besuch dieser Website gesehen hat.",Google,Marketing,2 Monate 30 Tage
+spin,.facebook.com,Cookie wird von Facebook verwendet,facebook,Marketing,1 Tage
+SSID,.google.com,ermöglicht Google Benutzerinformationen für von YouTube gehostete Videos zu sammeln.,Google,Marketing,1 Jahr 9 Monate 27 Tage
+test_cookie,Doubleclick,"Wird verwendet, um zu überprüfen, ob der Browser des Benutzers Cookies unterstützt.",Doubleclick,Marketing,1 Tag
+tfw_exp,.twitter.com,Twitter Tracking Technologien ermöglichen die Einbettung von Inhalten,twitter,Funktional,8 Tage
+tr,Facebook,"Wird von Facebook verwendet, um eine Reihe von Werbeprodukten zu liefern, z. B. Echtzeit-Gebote von Drittanbietern.",Facebook,Marketing,Sitzung
+twid,.twitter.com,Cookie-Set aufgrund von Twitter-Integrations- und Freigabefunktionen in den sozialen Medien,twitter,Funktional,4 Jahr 11 Monate 24 Tage
+UserMatchHistory,.linkedin.com,"Dieses Cookie wird verwendet, um Besucher zu verfolgen, so dass relevantere Anzeigen basierend auf den Präferenzen des Besuchers geschaltet werden können.",Linkedin,Marketing,29 Tage
+UserMatchHistory,Linkedin,"Wird verwendet, um Besucher auf mehreren Websites zu verfolgen, um relevante Werbung basierend auf den Präferenzen des Besuchers zu präsentieren.",Linkedin,Marketing,29 Tage
+utm_campaign,www.capgemini.com,Speichert den Kampagnen-Abfrageparameter utm_campaign.,Google Analytics,Statistiken,Sitzung
+utm_content,www.capgemini.com,wird von Google Analytics verwendet,Google Analytics,Statistiken,Sitzung
+utm_medium,www.capgemini.com,wird von Google Analytics verwendet,Google Analytics,Statistiken,Sitzung
+utm_source,www.capgemini.com,wird von Google Analytics verwendet,Google Analytics,Statistiken,Sitzung
+utm_term,www.capgemini.com,wird von Google Analytics verwendet,Google Analytics,Statistiken,Sitzung
+visitor_id#,Pardot,"Dieses Cookie ist eine Sicherheitsmaßnahme, um sicherzustellen, dass ein böswilliger Benutzer sich nicht als ein Besucher von Pardot ausgeben kann und auf entsprechende potenzielle Informationen zugreifen kann",Pardot,Notwendig,10 Jahre
+visitor_id#-hash,Pardot,"Dieses Cookie ist eine Sicherheitsmaßnahme, um sicherzustellen, dass ein böswilliger Benutzer sich nicht als ein Besucher von Pardot ausgeben kann und auf entsprechende potenzielle Informationen zugreifen kann",Pardot,Notwendig,10 Jahre
+wd,.facebook.com,"Dieses Cookie speichert die Größe des Browserfensters und wird von Facebook verwendet, um das Rendern der Seite zu optimieren.",facebook,Funktional,7 Tage
+xs,.facebook.com,"Dieses Cookie enthält mehrere Informationen, die durch Doppelpunkte getrennt sind",facebook,Funktional,2 Monate 30 Tage

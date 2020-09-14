@@ -1,0 +1,98 @@
+cookie_info,Domain,Description,category,Categorization,Expiry Date
+__aza_perm,Azalead Publisher,,Azalead Publisher,Targeting/Advertising,1 Year
+__Secure-3PAPISID,.google.com,Se utiliza con fines de orientación para crear un perfil de los intereses del visitante del sitio web a fin de mostrar publicidad relevante y personalizada de Google,Google,Targeting/Advertising,1 Year 10 Months 24 Days
+__Secure-3PSID,.google.com,Se utiliza con fines de orientación para crear un perfil de los intereses del visitante del sitio web a fin de mostrar publicidad relevante y personalizada de Google,Google,Targeting/Advertising,1 Year 11 Months 27 Days
+__Secure-APISID,.google.com,Se utiliza con fines de orientación para crear un perfil de los intereses del visitante del sitio web a fin de mostrar publicidad relevante y personalizada de Google,Google,Targeting/Advertising,6 Months 17 Days
+__Secure-HSID,.google.com,"Utilizamos cookies de seguridad para autenticar a los usuarios, evitar el uso fraudulento de las credenciales de inicio de sesión y proteger los datos de los usuarios de terceros no autorizados.",Google,Necessary,6 Months 17 Days
+__Secure-SSID,.google.com,"Utilizamos cookies de seguridad para autenticar a los usuarios, evitar el uso fraudulento de las credenciales de inicio de sesión y proteger los datos de los usuarios de terceros no autorizados.",Google,Necessary,6 Months 17 Days
+__utma,.capgemini.com,Se utiliza para distinguir usuarios y sesiones. La cookie se crea cuando se ejecuta la biblioteca javascript y no existen cookies __utma existentes. La cookie se actualiza cada vez que se envían datos a Google Analytics.,Google Analytics,Statistic,1 Year 11 Months 24 Days
+__utmv,.capgemini.com,Se utiliza para almacenar datos variables personalizados a nivel de visitante. Esta cookie se crea cuando un desarrollador utiliza el método _setCustomVar con una variable personalizada de nivel de visitante. Esta cookie también se usó para el método obsoleto _setVar. La cookie se actualiza cada vez que se envían datos a Google Analytics.,Google Analytics,Statistic,1 Year 11 Months 24 Days
+__utmz,.capgemini.com,Almacena la fuente de tráfico o campaña que explica cómo el usuario llegó a su sitio. La cookie se crea cuando se ejecuta la biblioteca javascript y se actualiza cada vez que se envían datos a Google Analytics.,Google Analytics,Statistic,5 Months 24 Days
+_fbp,.capgemini.com,"Utilizado por Facebook para ofrecer una serie de productos publicitarios, como ofertas en tiempo real de anunciantes externos",facebook,Targeting/Advertising,2 Months 30 Days
+_fbp,Facebook,"Utilizado por Facebook para ofrecer una serie de productos publicitarios, como ofertas en tiempo real de publicistas externos.
+vértices de anuncios .",Facebook,Targeting/Advertising,3 Months
+_ga,.capgemini.com,Se usa para distinguir a los usuarios.,Google Analytics,Statistic,1 Year 11 Months 30 Days
+_ga,Google Analytics,Registra una identificación única que se utiliza para generar datos estadísticos sobre cómo el visitante utiliza el sitio web.,Google Analytics,Statistic,2 Years
+_gac_UA-105264421-1,.capgemini.com,"Contiene información relacionada con la campaña para el usuario. Si ha vinculado sus cuentas de Google Analytics y Google Ads, las etiquetas de conversión del sitio web de Google Ads leerán esta cookie a menos que opte por no participar.",Google Analytics,Targeting/Advertising,2 Months 3 Days
+_gac_UA-105331519-21,.capgemini.com,"Contiene información relacionada con la campaña para el usuario. Si ha vinculado sus cuentas de Google Analytics y Google Ads, las etiquetas de conversión del sitio web de Google Ads leerán esta cookie a menos que opte por no participar.",Google Analytics,Targeting/Advertising,2 Months 3 Days
+_gat,Google Analytics,Utilizado por Google Analytics para reducir la tasa de solicitud.,Google Analytics,Necessary,1 Day
+_gat_UA-105264421-1,.capgemini.com,"Contiene información relacionada con la campaña para el usuario. Si ha vinculado sus cuentas de Google Analytics y Google Ads, las etiquetas de conversión del sitio web de Google Ads leerán esta cookie a menos que opte por no participar.",Google Analytics,Targeting/Advertising,0 Days
+_gat_UA-105331519-1,.capgemini.com,"Contiene información relacionada con la campaña para el usuario. Si ha vinculado sus cuentas de Google Analytics y Google Ads, las etiquetas de conversión del sitio web de Google Ads leerán esta cookie a menos que opte por no participar.",Google Analytics,Targeting/Advertising,0 Days
+_gcl_au,.capgemini.com,Utilizado por Google AdSense para experimentar con la eficiencia publicitaria en los sitios web que utilizan sus servicios,Google AdSense,Targeting/Advertising,15 Days
+_gcl_au,Google AdSense,"Utilizado por Google AdSense para experimentar con la eficiencia publicitaria en los sitios web que utilizan sus servicios. Es la cookie de origen para la funcionalidad de ""Conversion Linker"": toma información en clics de anuncios y la almacena en una cookie de origen para que las conversiones puedan atribuirse fuera La página de aterrizaje.",Google AdSense,Targeting/Advertising,3 Months
+_gcl_aw,.capgemini.com,Utilizado por Google AdSense para experimentar con la eficiencia publicitaria en los sitios web que utilizan sus servicios,Google AdSense,Targeting/Advertising,2 Months 3 Days
+_gid,.capgemini.com,Se usa para distinguir a los usuarios.,Google Analytics,Statistic,1 Days
+_gid,Google Analytics,Registra una identificación única que se utiliza para generar datos estadísticos sobre cómo el visitante utiliza el sitio web.,Google Analytics,Statistic,1 Day
+_hjid,.capgemini.com,"Cookie Hotjar. Esta cookie se establece cuando el cliente llega por primera vez a una página con el script Hotjar. Se utiliza para conservar la identificación de usuario aleatoria, exclusiva de ese sitio en el navegador. Esto garantiza que el comportamiento en visitas posteriores al mismo sitio se atribuirá a la misma ID de usuario.",Hotjar,Statistic,9 Months 7 Days
+_hjid,Hotjar cookie,Establece una ID única para la sesión. Esto permite que el sitio web obtenga datos sobre el comportamiento de los visitantes con fines estadísticos.,Hotjar cookie,Statistic,1 Year
+_hjTLDTest,Hotjar cookie,,hotjar,Statistic,Session
+_pk_id#,MATOMO/Azalead,"Recopila estadísticas sobre las visitas del usuario al sitio web, como el número de visitas, el tiempo promedio de permanencia en el sitio web y las páginas que se han leído.",MATOMO/Azalead,Statistic,1 Year
+_pk_ses#,MATOMO/Azalead,Utilizado por Piwik Analytics Platform para rastrear las solicitudes de página del visitante durante la sesión.,MATOMO/Azalead,Statistic,1 Day
+1P_JAR,.gstatic.com,"Google utiliza estas cookies para mostrar anuncios personalizados en los sitios de Google, en función de búsquedas recientes e interacciones anteriores.",Google,Targeting/Advertising,9 Days
+act,.facebook.com,Esta es una cookie de Facebook utilizada para su análisis e investigación.,facebook,Targeting/Advertising,Session
+ads/ga-audiences,Google Adword,Utilizado por Google AdWords para volver a atraer a los visitantes que probablemente se convertirán en clientes en función del comportamiento en línea del visitante en los sitios web.,Google Adword,Targeting/Advertising,Session
+ads_prefs,.twitter.com,"Estas cookies nos permiten rastrear la actividad de los visitantes desde nuestros anuncios de Twitter en nuestro sitio web, y también permiten a los usuarios compartir contenido de nuestros sitios web. Las cookies no nos proporcionan información confidencial relacionada con su cuenta.",twitter,Targeting/Advertising,4 Year 10 Months 22 Days
+ANID,.google.com,"La cookie ""ANID"" se utiliza para la publicidad que se publica en la web y se almacena en google.com.",Google,Targeting/Advertising,1 Year 9 Months 16 Days
+APISID,.google.com,"La cookie ""APISID"" se utiliza para reproducir videos de YouTube integrados en el sitio web.",Google,Functional,1 Year 9 Months 27 Days
+bcookie,.linkedin.com,Esta es una cookie de Microsoft MSN de primera parte para compartir el contenido del sitio web a través de las redes sociales.,microsoft,Functional,1 Year 11 Months 4 Days
+bcookie,Linkedin,"Utilizado por el servicio de redes sociales, LinkedIn, para rastrear el uso de servicios integrados",Linkedin,Targeting/Advertising,2 Years
+bscookie,Linkedin,"Utilizado por el servicio de redes sociales, LinkedIn, para rastrear el uso de servicios integrados",Linkedin,Targeting/Advertising,2 Years
+c_user,.facebook.com,La cookie c_user contiene la ID de usuario del usuario actualmente conectado.,facebook,Functional,2 Months 30 Days
+CONSENT,.google.com,Esta cookie lleva a cabo información sobre cómo el usuario final usa el sitio web y cualquier publicidad que el usuario final haya visto antes de visitar dicho sitio web.,Google,Targeting/Advertising,17 Year 11 Months 26 Days
+cookie_info,www.capgemini.com,"
+COOKIE INFO SCRIPT
+IS A LIGHTWEIGHT JAVASCRIPT FOR ALERTING USERS
+ABOUT THE USE OF COOKIES ON YOUR WEBSITE",cookieinfo,Necessary,9 Year 10 Months 25 Days
+csrf_same_site,.twitter.com,"Estas son cookies de Twitter que se utilizan en sitios web con feeds de Twitter y / o funcionalidades de intercambio de Twitter. Para obtener más información, consulte https://help.twitter.com/en/rules-and-policies/twitter-cookies",twitter,Functional,10 Months 23 Days
+csrf_same_site_set,.twitter.com,"Estas son cookies de Twitter que se utilizan en sitios web con feeds de Twitter y / o funcionalidades de intercambio de Twitter. Para obtener más información, consulte https://help.twitter.com/en/rules-and-policies/twitter-cookies",twitter,Functional,10 Months 22 Days
+datr,.facebook.com,El objetivo de la cookie datr es identificar el navegador web que se utiliza para conectarse a Facebook independientemente del usuario que haya iniciado sesión. Esta cookie desempeña un papel clave en las funciones de seguridad e integridad del sitio de Facebook.,facebook,Functional,1 Year 10 Months 19 Days
+dpr,.facebook.com,Facebook ** utiliza esta cookie para el rendimiento.,facebook,Statistic,7 Days
+fr,.facebook.com,Cookie está siendo utilizada por Facebook,facebook,Targeting/Advertising,2 Months 30 Days
+gtm_auth,www.googletagmanager.com,Estas cookies recopilan datos analíticos sobre el uso del sitio. Para más información:,gtm,Statistic,Session
+gtm_debug,www.googletagmanager.com,Estas cookies recopilan datos analíticos sobre el uso del sitio. Para más información:,gtm,Statistic,Session
+gtm_preview,www.googletagmanager.com,Estas cookies recopilan datos analíticos sobre el uso del sitio. Para más información:,gtm,Statistic,Session
+guest_id,.twitter.com,Twitter establece esta cookie para identificar y rastrear al visitante del sitio web.,twitter,Targeting/Advertising,1 Year 10 Months 23 Days
+HSID,.google.com,Permite a Google recopilar información del usuario para los videos alojados en YouTube.,Google,Targeting/Advertising,1 Year 9 Months 27 Days
+i/adsct,Twitter,Twitter.com utiliza la cookie para determinar la cantidad de visitantes que acceden al sitio web a través del contenido publicitario de teitter,Twitter,Targeting/Advertising,
+IDE,Doubleclick,Utilizado por Google DoubleClick para registrar e informar las acciones del usuario del sitio web después de ver o hacer clic en uno de los anuncios del anunciante con el fin de medir la eficacia de un anuncio y presentar anuncios dirigidos al usuario.,Doubleclick,Targeting/Advertising,1 Year
+JSESSIONID,.nr-data.net,Cookie utilizada para grabar la sesión del usuario.,Google,Necessary,Session
+JSESSIONID,,Conserva los estados de los usuarios en las solicitudes de página.,NA,Necessary,Session
+kdt,.twitter.com,"Twitter generalmente proporciona esta cookie para controlar los enlaces de referencia y el estado de inicio de sesión. Suelen estar presentes cuando hay un botón ""Tweet This"" u otro widget de Twitter presente en el sitio.",twitter,Functional,1 Year 5 Months 25 Days
+lang,.ads.linkedin.com,Establece el idioma predeterminado,Linkedin,Functional,Session
+li_sugr,.linkedin.com,Identificador del navegador,Linkedin,Functional,2 Months 30 Days
+lidc,.linkedin.com,Utilizado para enrutamiento,Linkedin,Functional,0 Days
+lpv95412,Pardot,"Esta cookie LPV está configurada para evitar que Pardot rastree múltiples vistas de página en un solo activo durante una sesión de 30 minutos. Por ejemplo, si un visitante vuelve a cargar una página de destino varias veces durante un período de 30 minutos, esta cookie evita que cada recarga se rastree como una vista de página.",Pardot,Necessary,1 Day
+NID,.googletagmanager.com,"Google utiliza estas cookies para mostrar anuncios personalizados en los sitios de Google, en función de búsquedas recientes e interacciones anteriores.",Google,Targeting/Advertising,6 Months 1 Days
+OGPC,.google.com,Esta cookie habilita la funcionalidad de Google Maps.,Google,Functional,19 Days
+pardot,Pardot,"Una cookie de sesión llamada pardot se configura en su navegador mientras está conectado a Pardot como usuario o cuando un visitante accede a un formulario, página de destino o página con el código de seguimiento de Pardot. La cookie denota una sesión activa y no se usa para el seguimiento.",Pardot,Necessary,Session
+personalization_id,.twitter.com,Esta cookie se establece debido a la integración de Twitter y las capacidades de intercambio para las redes sociales.,twitter,Targeting/Advertising,1 Year 9 Months 16 Days
+piwik.php,MATOMO/Azalead,"Recopila estadísticas sobre las visitas de los usuarios al sitio web, como el número de páginas vistas, el tiempo promedio de espera
+el sitio web y tiempo de lectura. ",MATOMO/Azalead,Targeting/Advertising,Session
+presence,.facebook.com,La cookie de presencia se usa para contener el estado de chat del usuario.,facebook,Functional,Session
+r/collect,Note Sure,Esta cookie se utiliza para enviar datos a Google Analytics sobre el dispositivo y el comportamiento del visitante. Realiza un seguimiento del visitante a través de dispositivos y canales de comercialización.,Note Sure,Targeting/Advertising,Session
+remember_checked_on,.twitter.com,"Twitter generalmente proporciona esta cookie para controlar los enlaces de referencia y el estado de inicio de sesión. Suelen estar presentes cuando hay un botón ""Tweet This"" u otro widget de Twitter presente en el sitio.",twitter,Functional,4 Year 11 Months 24 Days
+rweb_optin,.twitter.com,Utilizado por twitter,twitter,Targeting/Advertising,10 Months 23 Days
+rxVisitor,.capgemini.com,Utilizado por Dynatrace para rastrear <visitorID>,Dynatrace,Functional,1 Year 9 Months 28 Days
+SAPISID,.google.com,Permite a Google recopilar información del usuario para los videos alojados en YouTube.,Google,Targeting/Advertising,1 Year 9 Months 27 Days
+sb,.facebook.com,Cookie utilizada por Facebook,facebook,Targeting/Advertising,1 Year 10 Months 19 Days
+sc_anonymous_id,.soundcloud.com,Estas cookies se usan generalmente para Analytics y ayudan a contar cuántas personas visitan un sitio determinado al rastrear si lo ha visitado antes,soundcloud,Statistic,9 Year 10 Months 15 Days
+SEARCH_SAMESITE,.google.com,Permitir a los servidores mitigar el riesgo de CSRF y ataques de fuga de información al afirmar que una cookie en particular solo debe enviarse con solicitudes iniciadas desde el mismo dominio registrable.,Google,Necessary,5 Months 2 Days
+SID,.google.com,"Google utiliza estas cookies para mostrar anuncios personalizados en los sitios de Google, en función de búsquedas recientes e interacciones anteriores.",Google,Targeting/Advertising,1 Year 11 Months 27 Days
+SIDCC,.google.com,Esta cookie lleva a cabo información sobre cómo el usuario final utiliza el sitio web y cualquier publicidad que el usuario final haya visto antes de visitar dicho sitio web.,Google,Targeting/Advertising,2 Months 30 Days
+spin,.facebook.com,Cookie utilizada por Facebook,facebook,Targeting/Advertising,1 Days
+SSID,.google.com,Permite a Google recopilar información del usuario para los videos alojados en YouTube.,Google,Targeting/Advertising,1 Year 9 Months 27 Days
+test_cookie,Doubleclick,Se utiliza para verificar si el navegador del usuario admite cookies.,Doubleclick,Targeting/Advertising,1 Day
+tfw_exp,.twitter.com,Tecnologías de seguimiento de Twitter para permitir la inserción de contenido,twitter,Functional,8 Days
+tr,Facebook,"Utilizado por Facebook para ofrecer una serie de productos publicitarios, como ofertas en tiempo real de terceros anunciantes.",Facebook,Targeting/Advertising,Session
+twid,.twitter.com,Conjunto de cookies debido a la integración de Twitter y las capacidades para compartir en las redes sociales,twitter,Functional,4 Year 11 Months 24 Days
+UserMatchHistory,.linkedin.com,Esta cookie se utiliza para rastrear a los visitantes para que se puedan presentar anuncios más relevantes según las preferencias del visitante.,Linkedin,Targeting/Advertising,29 Days
+UserMatchHistory,Linkedin,"Se utiliza para rastrear a los visitantes en múltiples sitios web, con el fin de presentar publicidad relevante basada en sus preferencias.",Linkedin,Targeting/Advertising,29 Days
+utm_campaign,www.capgemini.com,Almacena el último parámetro de consulta utm_campaign.,Google Analytics,Statistic,Session
+utm_content,www.capgemini.com,Utilizada por Google Analytics,Google Analytics,Statistic,Session
+utm_medium,www.capgemini.com,Utilizada por Google Analytics,Google Analytics,Statistic,Session
+utm_source,www.capgemini.com,Utilizada por Google Analytics,Google Analytics,Statistic,Session
+utm_term,www.capgemini.com,Utilizada por Google Analytics,Google Analytics,Statistic,Session
+visitor_id#,Pardot,Esta cookie es una medida de seguridad para garantizar que un usuario malintencionado no pueda falsificar a un visitante de Pardot y acceder a la información de cliente potencial correspondiente,Pardot,Necessary,10 Year
+visitor_id#-hash,Pardot,Esta cookie es una medida de seguridad para garantizar que un usuario malintencionado no pueda falsificar a un visitante de Pardot y acceder a la información de cliente potencial correspondiente,Pardot,Necessary,10 Year
+wd,.facebook.com,Esta cookie almacena las dimensiones de la ventana del navegador y Facebook la utiliza para optimizar la representación de la página.,facebook,Functional,7 Days
+xs,.facebook.com,"Esta cookie contiene múltiples piezas de información, separadas por dos puntos.",facebook,Functional,2 Months 30 Days
