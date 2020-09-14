@@ -47,8 +47,12 @@ class PostType {
 			'has_archive'         => 'cookie-policy',
 			'exclude_from_search' => true,
 			'publicly_queryable'  => true,
-			'capability_type'     => 'manage_options',
 			'show_in_rest'        => true,
+			'capabilities'        => [
+				'edit_posts'    => 'manage_options',
+				'delete_posts'  => 'manage_options',
+				'publish_posts' => 'manage_options',
+			],
 		];
 
 		register_post_type( self::SLUG, $args );

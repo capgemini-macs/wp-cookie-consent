@@ -1,15 +1,15 @@
-#, fuzzy
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: MACS Cookie Consent\n"
-"POT-Creation-Date: 2020-08-13 10:44+0200\n"
-"PO-Revision-Date: 2020-07-02 15:56+0200\n"
+"POT-Creation-Date: 2020-08-13 10:23+0200\n"
+"PO-Revision-Date: 2020-08-13 15:32+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.4\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
@@ -25,7 +25,7 @@ msgstr ""
 #: src/CookiesUIElements/Checkbox.php:34
 #, php-format
 msgid "I accept \"%s\""
-msgstr ""
+msgstr "Ich akzeptiere die \"%s\""
 
 #: src/CookiesUIElements/CookieTable.php:105
 msgid "Cookie name"
@@ -33,16 +33,16 @@ msgstr ""
 
 #: src/CookiesUIElements/CookieTable.php:106 src/Fields/CookieDomain.php:22
 msgid "Domain"
-msgstr ""
+msgstr "Domäne"
 
 #: src/CookiesUIElements/CookieTable.php:107
 #: src/Fields/CookieDescription.php:26
 msgid "Description"
-msgstr ""
+msgstr "Beschreibung"
 
 #: src/CookiesUIElements/CookieTable.php:108
 msgid "Expiry Date"
-msgstr ""
+msgstr "Verfallsdatum"
 
 #: src/Fields/CookieExpiry.php:22
 msgid "Expiry"
@@ -69,10 +69,14 @@ msgstr ""
 #: src/Scripts.php:31
 msgid "Please allow statistical cookies to see this Youtube embed"
 msgstr ""
+"Bitte erlauben Sie die Nutzung von statistischen Cookies um Youtube-Videos "
+"sehen zu können"
 
 #: src/Scripts.php:32
 msgid "Please allow statistical cookies to see this Soundcloud embed"
 msgstr ""
+"Bitte erlauben Sie die Nutzung von statistischen Cookies um Soundcloud-"
+"Podcasts hören zu können"
 
 #: src/Settings/CookiePagesSettings.php:26
 msgid "Cookie Pages Setup"
@@ -80,7 +84,7 @@ msgstr ""
 
 #: src/Settings/CookiePagesSettings.php:41 src/Templates/cookie-policy.php:18
 msgid "Cookie Policy"
-msgstr ""
+msgstr "Cookie-Richtlinie"
 
 #: src/Settings/CookiePagesSettings.php:63
 msgid "User Preferences Page"
@@ -134,15 +138,15 @@ msgstr ""
 
 #: src/Templates/cookie-popup.php:22
 msgid "Allow all cookies"
-msgstr ""
+msgstr "Alle Cookies zulassen"
 
 #: src/Templates/cookie-popup.php:23
 msgid "Manage cookie settings"
-msgstr ""
+msgstr "Cookie-Einstellungen verwalten"
 
 #: src/Templates/cookie-popup.php:24
 msgid "Decline all cookies"
-msgstr ""
+msgstr "Alle Cookies ablehnen"
 
 #: src/Templates/cookie-popup.php:28
 msgid "Accept only necessary cookies and close window"
@@ -150,23 +154,23 @@ msgstr ""
 
 #: src/Templates/cookie-user-preferences.php:18
 msgid "Cookie settings"
-msgstr ""
+msgstr "Cookies-Einstellungen"
 
 #: src/Templates/cookie-user-preferences.php:33
 msgid "Set-up your preferences"
-msgstr ""
+msgstr "Einstellungen einrichten"
 
 #: src/Templates/cookie-user-preferences.php:43
 msgid "Save my settings"
-msgstr ""
+msgstr "Einstellungen speichern"
 
 #: src/Templates/cookie-user-preferences.php:43
 msgid "Settings saved!"
-msgstr ""
+msgstr "Einstellungen gespeichert!"
 
 #: src/Templates/cookie-user-preferences.php:46
 msgid "Other non-cookie technologies"
-msgstr ""
+msgstr "Andere Nicht-Cookie-Technologien"
 
 #: src/Templates/cookie-user-preferences.php:54
 #, php-format
@@ -174,6 +178,8 @@ msgid ""
 "For more information related to the cookies, please visit our <a href=\"%s"
 "\">cookie policy</a>"
 msgstr ""
+"Für weitere Informationen zu den Cookies empfehlen wir Ihnen, <a href=\"%s"
+"\">die Cookie-Richtlinie zu besuchen</a>"
 
 #. Plugin Name of the plugin/theme
 msgid "MACS Cookie Consent"

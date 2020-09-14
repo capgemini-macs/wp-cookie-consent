@@ -40,7 +40,7 @@ get_header();
 						<?php $context->render_consent_checkboxes(); ?>						
 
 						<div class="col-12 text-left">
-							<a href="#" class="section__button" id="macs_cookies_save_preferences"><?php esc_html_e( 'Save my settings', 'macs_cookies' ); ?></a> <span class="macs_cookies_saved"><?php esc_html_e( 'Settings saved!' ); ?></span>
+							<a href="#" class="section__button" id="macs_cookies_save_preferences"><?php esc_html_e( 'Save my settings', 'macs_cookies' ); ?></a> <span class="macs_cookies_saved"><?php esc_html_e( 'Settings saved!', 'macs_cookies' ); ?></span>
 						</div>
 
 					<h2><?php esc_html_e( 'Other non-cookie technologies', 'macs_cookies' ); ?></h2>

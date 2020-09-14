@@ -1,0 +1,93 @@
+cookie_info,Domain,Description,category,Categorization,Expiry Date
+__aza_perm,Azalead Publisher,,Azalead Publisher,Targeting/Advertentie,1 jaar
+__Secure-3PAPISID,.google.com,"Gebruikt voor targetingdoeleinden om een profiel op te bouwen van de interesses van de websitebezoeker, om vervolgens relevante, gepersonaliseerde Google-advertenties te tonen",Google,Targeting/Advertentie,1 jaar 10 maanden 24 dagen
+__Secure-3PSID,.google.com,"Gebruikt voor targetingdoeleinden om een profiel op te bouwen van de interesses van de websitebezoeker, om vervolgens relevante, gepersonaliseerde Google-advertenties te tonen",Google,Targeting/Advertentie,1 jaar 11 maanden 27 dagen
+__Secure-APISID,.google.com,"Gebruikt voor targetingdoeleinden om een profiel op te bouwen van de interesses van de websitebezoeker, om vervolgens relevante, gepersonaliseerde Google-advertenties te tonen",Google,Targeting/Advertentie,6 maanden 17 dagen
+__Secure-HSID,.google.com,"We gebruiken beveiligingscookies om gebruikers te verifiëren, frauduleus gebruik van inloggegevens te voorkomen en gebruikersgegevens te beschermen tegen toegang door onbevoegden",Google,Noodzakelijk,6 maanden 17 dagen
+__Secure-SSID,.google.com,"We gebruiken beveiligingscookies om gebruikers te verifiëren, frauduleus gebruik van inloggegevens te voorkomen en gebruikersgegevens te beschermen tegen toegang door onbevoegden",Google,Noodzakelijk,6 maanden 17 dagen
+__utma,.capgemini.com,Gebruikt om gebruikers en sessies van elkaar te onderscheiden. Het cookie wordt aangemaakt als de JavaScript-bibliotheek wordt uitgevoerd en er geen bestaande __utma-cookies zijn. Het cookie wordt telkens bijgewerkt als er gegevens naar Google Analytics worden verstuurd.,Google Analytics,Statistiek,1 jaar 11 maanden 24 dagen
+__utmv,.capgemini.com,Gebruikt om aangepaste variabele gegevens op bezoekersniveau te bewaren. Dit cookie wordt aangemaakt als een ontwikkelaar de methode _setCustomVar gebruikt met een aangepaste variabele op bezoekersniveau. Dit cookie wordt ook gebruikt voor de verouderde methode _setVar. Het cookie wordt telkens bijgewerkt als er gegevens naar Google Analytics worden verstuurd.,Google Analytics,Statistiek,1 jaar 11 maanden 24 dagen
+__utmz,.capgemini.com,Hiermee wordt de verkeersbron of campagne bewaard waarmee de gebruiker op de site is beland. Het cookie wordt aangemaakt als de JavaScript-bibliotheek wordt uitgevoerd en wordt telkens bijgewerkt als er gegevens naar Google Analytics worden verstuurd.,Google Analytics,Statistiek,5 maanden 24 dagen
+_fbp,.capgemini.com,"Gebruikt door Facebook om een reeks reclameproducten aan te bieden, zoals realtime bidding door externe adverteerders",facebook,Targeting/Advertentie,2 maanden 30 dagen
+_fbp,Facebook,"Gebruikt door Facebook om een reeks reclameproducten aan te bieden, zoals real-time bidding door externe adverteerders.",Facebook,Targeting/Advertentie,3 maanden
+_ga,.capgemini.com,Gebruikt om gebruikers van elkaar te onderscheiden.,Google Analytics,Statistiek,1 jaar 11 maanden 30 dagen
+_ga,Google Analytics,Hiermee wordt een unieke ID geregistreerd waarmee statistische gegevens worden gegenereerd over hoe de bezoeker de website gebruikt.,Google Analytics,Statistiek,2 jaar
+_gac_UA-105264421-1,.capgemini.com,"Bevat campagnegerelateerde informatie voor de gebruiker. Als u uw Google Analytics- en Google Ads-accounts heeft gekoppeld, lezen websiteconversietags van Google Ads dit cookie, tenzij u zich hiervoor afmeldt.",Google Analytics,Targeting/Advertentie,2 maanden 3 dagen
+_gac_UA-105331519-21,.capgemini.com,"Bevat campagnegerelateerde informatie voor de gebruiker. Als u uw Google Analytics- en Google Ads-accounts heeft gekoppeld, lezen websiteconversietags van Google Ads dit cookie, tenzij u zich hiervoor afmeldt.",Google Analytics,Targeting/Advertentie,2 maanden 3 dagen
+_gat,Google Analytics,Gebruikt door Google Analytics om het aanvraagpercentage te regelen,Google Analytics,Noodzakelijk,1 dag
+_gat_UA-105264421-1,.capgemini.com,"Bevat campagnegerelateerde informatie voor de gebruiker. Als u uw Google Analytics- en Google Ads-accounts heeft gekoppeld, lezen websiteconversietags van Google Ads dit cookie, tenzij u zich hiervoor afmeldt.",Google Analytics,Targeting/Advertentie,0 dagen
+_gat_UA-105331519-1,.capgemini.com,"Bevat campagnegerelateerde informatie voor de gebruiker. Als u uw Google Analytics- en Google Ads-accounts heeft gekoppeld, lezen websiteconversietags van Google Ads dit cookie, tenzij u zich hiervoor afmeldt.",Google Analytics,Targeting/Advertentie,0 dagen
+_gcl_au,.capgemini.com,Gebruikt door Google AdSense voor experimenten met de efficiëntie van advertenties op verschillende websites waarop hun diensten worden gebruikt.,Google AdSense,Targeting/Advertentie,15 dagen
+_gcl_au,Google AdSense,"Gebruikt door Google AdSense voor experimenten met de efficiëntie van advertenties op verschillende websites waarop hun diensten worden gebruikt. Dit is het eigen cookie voor de functie ‘Conversion Linker’: informatie uit kliks op advertenties wordt in een eigen cookie bewaard, zodat conversies buiten de landingspagina kunnen worden bijgehouden.",Google AdSense,Targeting/Advertentie,3 maanden
+_gcl_aw,.capgemini.com,Gebruikt door Google AdSense voor experimenten met de efficiëntie van advertenties op verschillende websites waarop hun diensten worden gebruikt.,Google AdSense,Targeting/Advertentie,2 maanden 3 dagen
+_gid,.capgemini.com,Gebruikt om gebruikers van elkaar te onderscheiden.,Google Analytics,Statistiek,1 dag
+_gid,Google Analytics,Hiermee wordt een unieke ID geregistreerd waarmee statistische gegevens worden gegenereerd over hoe de bezoeker de website gebruikt.,Google Analytics,Statistiek,1 dag
+_hjid,.capgemini.com,Hotjar-cookie. Dit cookie wordt geplaatst zodra de klant op een pagina met een Hotjar-script belandt. Hiermee wordt de willekeurige gebruikers-ID behouden die uniek is voor die website in de browser. Zo kan gedrag in verdere bezoeken aan dezelfde website aan dezelfde gebruikers-ID worden gekoppeld.,Hotjar,Statistiek,9 maanden 7 dagen
+_hjid,Hotjar cookie,Hiermee wordt een unieke ID voor de sessie ingesteld. Zo kunnen er gegevens worden verzameld over gedrag van websitebezoekers voor statistische doeleinden.,Hotjar cookie,Statistiek,1 jaar
+_hjTLDTest,Hotjar cookie,,hotjar,Statistiek,Sessie
+_pk_id#,MATOMO/Azalead,"Hiermee worden statistieken verzameld over de bezoeken van de gebruiker aan de website, zoals het aantal bezoeken, hoeveel tijd de gebruiker gemiddeld op de website heeft doorgebracht en welke pagina’s hij of zij heeft bekeken.",MATOMO/Azalead,Statistiek,1 jaar
+_pk_ses#,MATOMO/Azalead,Gebruikt door Piwik Analytics Platform om pagina-aanvragen van de gebruiker tijdens de sessie bij te houden.,MATOMO/Azalead,Statistiek,1 dag
+1P_JAR,.gstatic.com,Deze cookies worden door Google gebruikt om gepersonaliseerde advertenties op Google-websites te tonen op basis van recente zoekopdrachten en eerdere activiteiten.,Google,Targeting/Advertentie,9 dagen
+act,.facebook.com,Dit is een cookie dat Facebook gebruikt voor analyses en onderzoek,facebook,Targeting/Advertentie,Sessie
+ads/ga-audiences,Google Adword,Gebruikt door Google AdWords om bezoekers van wie de kans op conversie groot is opnieuw te benaderen op basis van hun gedrag online.,Google Adword,Targeting/Advertentie,Sessie
+ads_prefs,.twitter.com,Dankzij deze cookies kunnen we activiteiten van bezoekers via onze Twitter-advertenties op onze website volgen en kunnen gebruikers content van onze websites delen. We ontvangen via deze cookies geen vertrouwelijke informatie met betrekking tot uw account.,twitter,Targeting/Advertentie,4 jaar 10 maanden 22 dagen
+ANID,.google.com,Het cookie ‘ANID’ wordt gebruikt voor marketing op websites en wordt in google.com opgeslagen.,Google,Targeting/Advertentie,1 jaar 9 maanden 16 dagen
+APISID,.google.com,Het cookie ‘APISID’ wordt gebruikt om ingesloten YouTube-video’s op de website af te spelen.,Google,Functioneel,1 jaar 9 maanden 27 dagen
+bcookie,.linkedin.com,Dit is een eigen Microsoft MSN-cookie voor het delen van websitecontent via sociale media.,microsoft,Functioneel,1 jaar 11 maanden 4 dagen
+bcookie,Linkedin,"Gebruikt door het sociale netwerk LinkedIn, waarmee het gebruik van ingesloten diensten wordt bijgehouden",Linkedin,Targeting/Advertentie,2 jaren
+bscookie,Linkedin,"Gebruikt door het sociale netwerk LinkedIn, waarmee het gebruik van ingesloten diensten wordt bijgehouden",Linkedin,Targeting/Advertentie,2 jaar
+c_user,.facebook.com,Het cookie c_user bevat de gebruikers-ID van de gebruiker die momenteel is ingelogd.,facebook,Functioneel,2 maanden 30 dagen
+CONSENT,.google.com,Dit cookie verzamelt informatie over hoe de eindgebruiker de website gebruikt en eventuele advertenties die de eindgebruiker mogelijk heeft gezien voordat hij of zij de website in kwestie bezoekt.,Google,Targeting/Advertentie,17 jaar 11 maanden 26 dagen
+cookie_info,www.capgemini.com,Cookie Info Script is een eenvoudig JavaScript-script waarmee gebruikers op het gebruik van cookies op een website worden gewezen,cookieinfo,Noodzakelijk,9 jaar 10 maanden 25 dagen
+csrf_same_site,.twitter.com,Dit zijn Twitter-cookies die op websites met Twitter-feeds en/of Twitter-deelopties worden gebruikt. Raadpleeg https://help.twitter.com/en/rules-and-policies/twitter-cookies voor meer informatie,twitter,Functioneel,10 maanden 23 dagen
+csrf_same_site_set,.twitter.com,Dit zijn Twitter-cookies die op websites met Twitter-feeds en/of Twitter-deelopties worden gebruikt. Raadpleeg https://help.twitter.com/en/rules-and-policies/twitter-cookies voor meer informatie,twitter,Functioneel,10 maanden 22 dagen
+datr,.facebook.com,Het datr-cookie is bedoeld om de webbrowser te herkennen waarmee los van de ingelogde gebruiker verbinding wordt gemaakt met Facebook. Dit cookie speelt een belangrijke rol in de beveiligings- en site-integriteitsfuncties van Facebook.,facebook,Functioneel,1 jaar 10 maanden 19 dagen
+dpr,.facebook.com,Dit cookie wordt door Facebook** gebruikt voor prestaties.,facebook,Statistiek,7 dagen
+fr,.facebook.com,Cookie wordt door Facebook gebruikt,facebook,Targeting/Advertentie,2 maanden 30 dagen
+gtm_auth,www.googletagmanager.com,Met deze cookies worden analytische gegevens verzameld over sitegebruik. Voor meer informatie:,gtm,Statistiek,Sessie
+gtm_debug,www.googletagmanager.com,Met deze cookies worden analytische gegevens verzameld over sitegebruik. Voor meer informatie:,gtm,Statistiek,Sessie
+gtm_preview,www.googletagmanager.com,Met deze cookies worden analytische gegevens verzameld over sitegebruik. Voor meer informatie:,gtm,Statistiek,Sessie
+guest_id,.twitter.com,Dit cookie wordt geplaatst door Twitter om websitebezoekers te herkennen en volgen.,twitter,Targeting/Advertentie,1 jaar 10 maanden 23 dagen
+HSID,.google.com,Hiermee kan Google gebruikersinformatie verzamelen voor video’s die door YouTube worden gehost.,Google,Targeting/Advertentie,1 jaar 9 maanden 27 dagen
+i/adsct,Twitter,Dit cookie wordt door Twitter gebruikt om te bepalen hoeveel gebruikers de website hebben bezocht via Twitter-advertenties,Twitter,Targeting/Advertentie,
+IDE,Doubleclick,"Gebruikt door Google DoubleClick om de activiteiten van een gebruiker op de website te registreren en in rapporten op te nemen nadat de gebruiker op een van de advertenties van de adverteerder heeft geklikt, met als doel de effectiviteit van een advertentie te meten en de gebruiker relevante advertenties te tonen.",Doubleclick,Targeting/Advertentie,1 jaar
+JSessieID,.nr-data.net,Cookie gebruikt om gebruikerssessie vast te leggen.,Google,Noodzakelijk,Sessie
+JSessieID,,Hiermee blijft de status van gebruikers over verschillende pagina-aanvragen behouden.,NA,Noodzakelijk,Sessie
+kdt,.twitter.com,Dit cookie wordt over het algemeen door Twitter aangeboden om verwijzingslinks en inlogstatussen bij te houden. Het is meestal aanwezig als de website een ‘Tweet This’-knop of een andere Twitter-widget bevat.,twitter,Functioneel,1 jaar 5 maanden 25 dagen
+lang,.ads.linkedin.com,Hiermee wordt de standaardlandinstelling/-taal aangegeven,Linkedin,Functioneel,Sessie
+li_sugr,.linkedin.com,Identificatiecode browser,Linkedin,Functioneel,2 maanden 30 dagen
+lidc,.linkedin.com,Gebruikt voor routering,Linkedin,Functioneel,0 dagen
+lpv95412,Pardot,"Dit lpv-cookie wordt geplaatst om te voorkomen dat Pardot bij één paginaonderdeel meerdere paginaweergaven gedurende 30 minuten ook als meerdere bezoeken worden geteld. Als een bezoeker in een tijdsbestek van 30 minuten een landingspagina meerdere keren herlaadt, voorkomt dit cookie dat die herladen pagina’s als aparte paginaweergaven worden meegeteld.",Pardot,Noodzakelijk,1 dag
+NID,.googletagmanager.com,Deze cookies worden door Google gebruikt om gepersonaliseerde advertenties op Google-websites te tonen op basis van recente zoekopdrachten en eerdere activiteiten.,Google,Targeting/Advertentie,6 maanden 1 dag
+OGPC,.google.com,Dankzij dit cookie kan Google Maps op de website worden gebruikt.,Google,Functioneel,19 dagen
+pardot,Pardot,"Er wordt een sessiecookie met de naam ‘pardot’ in uw browser opgeslagen als u als gebruiker bent ingelogd bij Pardot of als een gebruiker een formulier, landingspagina of pagina met een Pardot-trackingcode bezoekt. Het cookie geeft een actieve sessie aan en kan niet voor tracking wordt gebruikt.",Pardot,Noodzakelijk,Sessie
+personalization_id,.twitter.com,Dit cookie wordt geplaatst voor Twitter-integratie en deelopties op sociale media.,twitter,Targeting/Advertentie,1 jaar 9 maanden 16 dagen
+piwik.php,MATOMO/Azalead,"Hiermee worden statistieken verzameld over de bezoeken van de gebruiker aan de website, zoals het aantal bezoeken, hoeveel tijd de gebruiker gemiddeld op de website heeft doorgebracht en welke pagina’s hij of zij heeft bekeken",MATOMO/Azalead,Targeting/Advertentie,Sessie
+presence,.facebook.com,Het aanwezigheidscookie bevat de chatstatus van de gebruiker.,facebook,Functioneel,Sessie
+r/collect,Note Sure,Dit cookie wordt gebruikt om gegevens over het apparaat en gedrag van de bezoeker naar Google Analytics te sturen. Hiermee wordt de bezoeker via verschillende apparaten en marketingkanalen gevolgd.,Note Sure,Targeting/Advertentie,Sessie
+remember_checked_on,.twitter.com,Dit cookie wordt over het algemeen door Twitter aangeboden om verwijzingslinks en inlogstatussen bij te houden. Het is meestal aanwezig als de website een ‘Tweet This’-knop of een andere Twitter-widget bevat.,twitter,Functioneel,4 jaar 11 maanden 24 dagen
+rweb_optin,.twitter.com,Gebruikt door Twitter,twitter,Targeting/Advertentie,10 maanden 23 dagen
+rxVisitor,.capgemini.com,Gebruikt door Dynatrace om bezoekers te volgen,Dynatrace,Functioneel,1 jaar 9 maanden 28 dagen
+SAPISID,.google.com,Hiermee kan Google gebruikersinformatie verzamelen voor video’s die door YouTube worden gehost.,Google,Targeting/Advertentie,1 jaar 9 maanden 27 dagen
+sb,.facebook.com,Cookie wordt door Facebook gebruikt,facebook,Targeting/Advertentie,1 jaar 10 maanden 19 dagen
+sc_anonymous_id,.soundcloud.com,Deze cookies worden over het algemeen voor Analytics gebruikt om bij te houden hoeveel mensen een bepaalde website opnieuw bezoeken.,soundcloud,Statistiek,9 jaar 10 maanden 15 dagen
+SEARCH_SAMESITE,.google.com,Hiermee kunnen servers het risico op csrf-aanvallen en informatielekken beperken door af te dwingen dat een bepaald cookie alleen wordt verzonden bij verzoeken die vanaf hetzelfde registreerbare domein zijn gestart.,Google,Noodzakelijk,5 maanden 2 dagen
+SID,.google.com,Deze cookies worden door Google gebruikt om gepersonaliseerde advertenties op Google-websites te tonen op basis van recente zoekopdrachten en eerdere activiteiten.,Google,Targeting/Advertentie,1 jaar 11 maanden 27 dagen
+SIDCC,.google.com,Dit cookie verzamelt informatie over hoe de eindgebruiker de website gebruikt en eventuele advertenties die de eindgebruiker mogelijk heeft gezien voordat hij of zij de website in kwestie bezoekt.,Google,Targeting/Advertentie,2 maanden 30 dagen
+spin,.facebook.com,Cookie wordt door Facebook gebruikt,facebook,Targeting/Advertentie,1 dag
+SSID,.google.com,Hiermee kan Google gebruikersinformatie verzamelen voor video’s die door YouTube worden gehost.,Google,Targeting/Advertentie,1 jaar 9 maanden 27 dagen
+test_cookie,Doubleclick,Gebruikt om te controleren of de browser van de gebruiker ondersteuning biedt voor cookies.,Doubleclick,Targeting/Advertentie,1 dag
+tfw_exp,.twitter.com,Trackingtechnologieën van Twitter waardoor content kan worden ingesloten,twitter,Functioneel,8 dagen
+tr,Facebook,"Gebruikt door Facebook om een reeks reclameproducten aan te bieden, zoals real-time bidding door externe adverteerders.",Facebook,Targeting/Advertentie,Sessie
+twid,.twitter.com,Cookie dat wordt geplaatst voor Twitter-integratie en deelopties op sociale media,twitter,Functioneel,4 jaar 11 maanden 24 dagen
+UserMatchHistory,.linkedin.com,Met dit cookie worden bezoekers gevolgd zodat ze relevantere advertenties te zien krijgen op basis van hun voorkeuren.,Linkedin,Targeting/Advertentie,29 dagen
+UserMatchHistory,Linkedin,"Gebruikt om bezoekers op meerdere websites te volgen, zodat zij relevante advertenties te zien krijgen op basis van hun voorkeuren.",Linkedin,Targeting/Advertentie,29 dagen
+utm_campaign,www.capgemini.com,Hiermee wordt de laatste utm_campaign-queryparameter bewaard.,Google Analytics,Statistiek,Sessie
+utm_content,www.capgemini.com,Gebruikt door Google Analytics,Google Analytics,Statistiek,Sessie
+utm_medium,www.capgemini.com,Gebruikt door Google Analytics,Google Analytics,Statistiek,Sessie
+utm_source,www.capgemini.com,Gebruikt door Google Analytics,Google Analytics,Statistiek,Sessie
+utm_term,www.capgemini.com,Gebruikt door Google Analytics,Google Analytics,Statistiek,Sessie
+visitor_id#,Pardot,"Dit cookie dient als veiligheidsmaatregel, zodat kwaadwillende gebruikers zich niet als Pardot-bezoekers kunnen voordoen en zich geen toegang kunnen verschaffen tot informatie over potentiële klanten.",Pardot,Noodzakelijk,10 jaar
+visitor_id#-hash,Pardot,"Dit cookie dient als veiligheidsmaatregel, zodat kwaadwillende gebruikers zich niet als Pardot-bezoekers kunnen voordoen en zich geen toegang kunnen verschaffen tot informatie over potentiële klanten.",Pardot,Noodzakelijk,10 jaar
+wd,.facebook.com,Met dit cookie worden de afmetingen van het browservenster bewaard en kan Facebook de pagina optimaal weergeven.,facebook,Functioneel,7 dagen
+xs,.facebook.com,"Dit cookie bevat verschillende stukjes informatie, door dubbele punten van elkaar gescheiden",facebook,Functioneel,2 maanden 30 dagen

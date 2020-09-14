@@ -22,10 +22,10 @@ class Cli extends \WPCOM_VIP_CLI_Command {
 	 * : test without changing the data
 	 *
 	 * [--filename]
-	 * : csv file in wp uploads dir
+	 * : csv file in /imports directory in plugin's dir
 	 *
 	 * ## EXAMPLES
-	 *   wp csv_import --dry-run=0
+	 *   wp macs-cookies csv_import --fielname=it.csv --dry-run=0
 	 *
 	 * @alias csv-import
 	 */
@@ -33,32 +33,72 @@ class Cli extends \WPCOM_VIP_CLI_Command {
 
 		$this->start_bulk_operation();
 
-		$args_assoc = wp_parse_args( $args_assoc, [
-			'dry-run'  => true,
-			'filename' => '',
-		] );
+		$args_assoc = wp_parse_args( 
+			$args_assoc, 
+			[
+				'dry-run'  => true,
+				'filename' => '',
+			] 
+		);
 
-		$dry_run = $args_assoc['dry-run'];
+		$dry_run  = $args_assoc['dry-run'];
 		$inserted = 0;
 
 		if ( empty( $args_assoc['filename'] ) ) {
 			\WP_CLI::error( 'No filename provided', true );
 		}
 
-		$csvfile = WP_CONTENT_DIR . '/uploads/' . $args_assoc['filename'];
+		$csvfile = MACS_COOKIE_CONSENT_PATH . '/imports/' . $args_assoc['filename'];
 
 		if ( ! file_exists( $csvfile ) ) {
 			\WP_CLI::error( 'File does not exist in uploads directory', true );
 		}
 
 		if ( $dry_run ) {
-			\WP_CLI::line( "-- DRY RUN IS ON -- ");
+			\WP_CLI::line( "-- DRY RUN IS ON -- " );
 		}
+
+		// We need to delete existing cookie posts first
+
+		\WP_CLI::line( "Deleting all existing cookie descriptions..." );
+
+		do {
+
+			$posts = get_posts( // phpcs:ignore WordPressVIPMinimum.VIP.RestrictedFunctions.get_posts_get_posts
+				[
+					'post_type'        => PostType::SLUG,
+					'post_status'      => 'any',
+					'posts_per_page'   => 100,
+					'paged'            => 1,
+					'suppress_filters' => false,
+					'no_found_rows'    => true,
+					'fields'           => 'ids',
+				]
+			);
+
+			foreach ( $posts as $post_id ) {
+				\WP_CLI::line( " -- Deleting cookie post ID [{$post_id}]" );
+				if ( ! $dry_run ) {
+					wp_delete_post( $post_id, true );
+				} else {
+					$posts = [];
+				}
+			}
+
+			$this->stop_the_insanity();
+
+			sleep( 1 );
+
+		} while ( count( $posts ) );
+
+		// Now it's time to insert new posts from CSV
+
+		\WP_CLI::line( "Importing cookie descriptions from CSV file" );
 
 		$csvFileHandler = fopen( $csvfile, 'r' );
 
 		$c = 0;
-		while( !feof( $csvFileHandler ) ) {
+		while ( ! feof( $csvFileHandler ) ) {
 
 			$c++;
 
@@ -72,12 +112,32 @@ class Cli extends \WPCOM_VIP_CLI_Command {
 			$name   = $data[0] ?: '';
 			$desc   = $data[2] ?: '';
 			$domain = $data[1] ?: '';
-			$expiry = $data[3] ?: '';
+			$expiry = $data[5] ?: '';
 			$type   = $data[4] ?: '';
 
 			// name is obligatory
 			if ( empty( $name ) || 'name' == $name ) {
 				continue;
+			}
+
+			// Adjust type
+			
+			switch ( $type ) {
+				case 'Targeting/Advertising':
+					$type = 'targeting';
+					break;
+
+				case 'Necessary':
+					$type = 'necessary';
+					break;
+
+				case 'Statistic':
+					$type = 'statistic';
+					break;
+
+				case 'Functional':
+					$type = 'functional';
+					break;
 			}
 
 			$post_data = [
@@ -98,12 +158,11 @@ class Cli extends \WPCOM_VIP_CLI_Command {
 
 					wp_set_object_terms( $new_id, [ $type ], Taxonomy::SLUG, false );
 
-					\WP_CLI::line( "Success! Inserted post: {$name}, type: $type");
+					\WP_CLI::line( "Success! Inserted post: {$name}, type: $type" );
 					$inserted++;
 				} else {
-					\WP_CLI::line( "Failed at inserting a post: {$name}, type: $type");
+					\WP_CLI::line( "Failed at inserting a post: {$name}, type: $type" );
 				}
-
 
 			} else {
 				\WP_CLI::line( "inserting post: {$name}, type: $type");
@@ -137,11 +196,14 @@ class Cli extends \WPCOM_VIP_CLI_Command {
 	function copy_cookie_pages( $args, $args_assoc ) {
 		$this->start_bulk_operation();
 
-		$args_assoc = wp_parse_args( $args_assoc, [
-			'dry-run'        => true,
-			'source_id'      => 0,
-			'destination_id' => 0,
-		] );
+		$args_assoc = wp_parse_args( 
+			$args_assoc, 
+			[
+				'dry-run'        => true,
+				'source_id'      => 0,
+				'destination_id' => 0,
+			] 
+		);
 
 		$is_dry_run = $args_assoc['dry-run'];
 		$source_id  = $args_assoc['source_id'];
@@ -156,7 +218,7 @@ class Cli extends \WPCOM_VIP_CLI_Command {
 		}
 
 		if ( $is_dry_run ) {
-			\WP_CLI::line( '..:: Running in DRY RUN mode ::.. ');
+			\WP_CLI::line( '..:: Running in DRY RUN mode ::.. ' );
 		}
 
 		$source_url = get_site_url( $source_id );
@@ -229,11 +291,14 @@ class Cli extends \WPCOM_VIP_CLI_Command {
 	function copy_cookie_terms( $args, $args_assoc ) {
 		$this->start_bulk_operation();
 
-		$args_assoc = wp_parse_args( $args_assoc, [
-			'dry-run'        => true,
-			'source_id'      => 0,
-			'destination_id' => 0,
-		] );
+		$args_assoc = wp_parse_args( 
+			$args_assoc, 
+			[
+				'dry-run'        => true,
+				'source_id'      => 0,
+				'destination_id' => 0,
+			] 
+		);
 
 		$is_dry_run = $args_assoc['dry-run'];
 		$source_id  = $args_assoc['source_id'];
@@ -264,7 +329,7 @@ class Cli extends \WPCOM_VIP_CLI_Command {
 			]
 		);
 
-		foreach( $terms as $term ) {
+		foreach ( $terms as $term ) {
 
 			\WP_CLI::line( " -- Getting data of a term [{$term->name}]");
 
@@ -293,7 +358,7 @@ class Cli extends \WPCOM_VIP_CLI_Command {
 			]
 		);
 
-		foreach( $terms as $term_id ) {
+		foreach ( $terms as $term_id ) {
 			\WP_CLI::line( " -- Deleting term ID [{$term_id}]" );
 
 			if ( ! $is_dry_run ) {
@@ -303,7 +368,7 @@ class Cli extends \WPCOM_VIP_CLI_Command {
 
 		\WP_CLI::line( ' -- Inserting cookie posts to site:' . get_bloginfo( 'url' ) );
 
-		foreach( $to_insert as $term_name => $term_data ) {
+		foreach ( $to_insert as $term_name => $term_data ) {
 
 			if ( ! $is_dry_run ) {
 				$term_order = $term_data['order'] ?? 1;
@@ -349,11 +414,14 @@ class Cli extends \WPCOM_VIP_CLI_Command {
 	function copy_cookie_table( $args, $args_assoc ) {
 		$this->start_bulk_operation();
 
-		$args_assoc = wp_parse_args( $args_assoc, [
-			'dry-run'        => true,
-			'source_id'      => 0,
-			'destination_id' => 0,
-		] );
+		$args_assoc = wp_parse_args( 
+			$args_assoc, 
+			[
+				'dry-run'        => true,
+				'source_id'      => 0,
+				'destination_id' => 0,
+			] 
+		);
 
 		$is_dry_run = $args_assoc['dry-run'];
 		$source_id  = $args_assoc['source_id'];
@@ -368,7 +436,7 @@ class Cli extends \WPCOM_VIP_CLI_Command {
 		}
 
 		if ( $is_dry_run ) {
-			\WP_CLI::line( '..:: Running in DRY RUN mode ::.. ');
+			\WP_CLI::line( '..:: Running in DRY RUN mode ::.. ' );
 		}
 
 		$to_insert = [];
@@ -394,12 +462,12 @@ class Cli extends \WPCOM_VIP_CLI_Command {
 
 			foreach ( $posts as $post_obj ) {
 
-				\WP_CLI::line( " -- Getting data from cookie post ID [{$post_obj->ID}]");
+				\WP_CLI::line( " -- Getting data from cookie post ID [{$post_obj->ID}]" );
 
 				$post_arr = $post_obj->to_array();
-				$type      = wp_get_object_terms( $post_obj->ID, Taxonomy::SLUG, [ 'fields' => 'slugs' ] );
-				$expiry    = get_post_meta( $post_obj->ID, 'cookie_expiry', true );
-				$domain    = get_post_meta( $post_obj->ID, 'cookie_domain', true );
+				$type     = wp_get_object_terms( $post_obj->ID, Taxonomy::SLUG, [ 'fields' => 'slugs' ] );
+				$expiry   = get_post_meta( $post_obj->ID, 'cookie_expiry', true );
+				$domain   = get_post_meta( $post_obj->ID, 'cookie_domain', true );
 
 				$post_arr['meta_input'] = [
 					'cookie_expiry' => $expiry,
@@ -412,7 +480,7 @@ class Cli extends \WPCOM_VIP_CLI_Command {
 
 				unset( $post_arr['ID'] );
 
-				$to_insert[] = $post_arr;				
+				$to_insert[] = $post_arr;
 			}
 
 			$this->stop_the_insanity();
@@ -448,7 +516,7 @@ class Cli extends \WPCOM_VIP_CLI_Command {
 			);
 
 			foreach ( $posts as $post_id ) {
-				\WP_CLI::line( " -- Deleting cookie post ID [{$post_id}]");
+				\WP_CLI::line( " -- Deleting cookie post ID [{$post_id}]" );
 				if ( ! $is_dry_run ) {
 					wp_delete_post( $post_id, true );
 				} else {
@@ -464,7 +532,7 @@ class Cli extends \WPCOM_VIP_CLI_Command {
 
 		\WP_CLI::line( ' -- Inserting cookie posts to site:' . get_bloginfo( 'url' ) );
 
-		foreach( $to_insert as $new_item ) {
+		foreach ( $to_insert as $new_item ) {
 			if ( ! $is_dry_run ) {
 				$new_id = wp_insert_post( $new_item );
 				// reinserting the taxonomy terms (might fail before due to caps restriction)

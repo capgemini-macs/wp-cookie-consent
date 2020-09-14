@@ -18,7 +18,7 @@ jQuery(document).ready(function ($) {
     $('body').click( function() {
       $('.cookieConsent__overlay.overlay-on').hide();
     } );
-    
+
     // Local variable cache for user preferences
     self.allowedCookies = [];
 
@@ -26,7 +26,7 @@ jQuery(document).ready(function ($) {
      * Kicks it off
      */
     self.init = function () {
-      
+
       /**
        * If popup is initialized, we setup GTM scripts only after user's action.
        * Otherwise we can do it based on current cookie preferences.
@@ -40,7 +40,9 @@ jQuery(document).ready(function ($) {
       self.checkAllowedBoxes()
 
       // Block embeds
-      self.blockEmbeds()
+      self.blockEmbeds() // Block  embeds function
+
+      self.trackUserConsent() // track user consent
     }
 
     /**
@@ -179,7 +181,7 @@ jQuery(document).ready(function ($) {
 
       // Set general consent cookies
       self.refreshConsentData()
-      
+
       // Hide the popup
       $('#popup-cookieConsent').hide();
       $('.cookieConsent__overlay.overlay-on').hide();
@@ -192,15 +194,15 @@ jQuery(document).ready(function ($) {
     /**
      * Initializes popup in following scenarios
      * - User did not accept cookies yet
-     * - Cookie Policy version is changed since the user accepted policy 
+     * - Cookie Policy version is changed since the user accepted policy
      *
      * NOTE: will also reset existing user settings in the cases described above.
      */
     self.popupInit = function() {
-      if ( 
-        self.cookieExists( 'macs_cookies_consent_' + MACS_COOKIES.ID ) && 
+      if (
+        self.cookieExists( 'macs_cookies_consent_' + MACS_COOKIES.ID ) &&
         self.cookieExists( 'macs_cookies_policy_v_' + MACS_COOKIES.ID ) &&
-        self.getCookie( 'macs_cookies_policy_v_' + MACS_COOKIES.ID ) === MACS_COOKIES.coookiePolicyVersion ) 
+        self.getCookie( 'macs_cookies_policy_v_' + MACS_COOKIES.ID ) === MACS_COOKIES.coookiePolicyVersion )
       {
         return false;
       }
@@ -255,16 +257,8 @@ jQuery(document).ready(function ($) {
         self.setupGTMscripts()
         // 6. Reflect data on settings page if it's currently viewed
         self.checkAllowedBoxes()
-        // 7. Change soundcloud src
-        var isIframeExist = document.getElementsByClassName('soundcloud');
-        if (isIframeExist.length > 0) {
-          $('.soundcloud').each( function() {
-            var newUrl = $(this).data('url');
-            $(this).attr('src', newUrl );
-            $(this).siblings( '.embed_placeholder' ).css('display', 'none');
-          })
-
-        }
+        // 7. Print embeds
+        self.printEmbeds() // Print embeds function
       })
 
       // Hide overlay if cookie settings page
@@ -274,11 +268,12 @@ jQuery(document).ready(function ($) {
       }
     }
 
-    // If cookies non exist, hide the embeds
+
+    // If cookies non exist, hide the iframe embeds
     self.blockEmbeds = function() {
 
       // If cookies non exist, hide the embeds
-      if ( self.cookieExists( 'macs_cookies_consent_' + MACS_COOKIES.ID ) ) {
+      if ( self.cookieExists( 'macs_cookies_statistics_' + MACS_COOKIES.ID ) ) {
         return true;
       }
 
@@ -294,17 +289,27 @@ jQuery(document).ready(function ($) {
       });
 
       $('.iframe_withoutcookies').each(function() {
-        var src = $(this).attr('src');
+       var src = $(this).attr('src');
 
-        // Soundcloud iframe
-        if(src.indexOf('https://w.soundcloud.com/player/?url=') != -1 && src.indexOf('visual=true') != -1) {
+       // Soundcloud iframe
+      var exp = new RegExp(/(snd\.sc|soundcloud\.com)/);
 
-          var url_embed = $(this).attr('src');
+        if ( exp.test(src) == true ){
 
-          $(this).attr('data-url', url_embed);
-          $(this).attr('src', 'about:blank');
-          $(this).addClass('soundcloud')
-          $( '.soundcloud' ).before( "<div class='embed_placeholder'>Please allow statistical cookies to see this embed.</div>" );
+          var sndbUrl = src;
+          var sndbH = $(this).attr('height');
+          var sndbW = $(this).attr('width');
+
+          var fieldIdInput = $('<div />', {
+            'class': 'embed_placeholder_soundcloud embed_placeholder',
+            'data-url': sndbUrl,
+            'data-height': sndbH,
+            'data-width':sndbW,
+          })
+
+          fieldIdInput.text(MACS_COOKIES.embedCookiesSnd)
+          $(this).replaceWith(fieldIdInput)
+
         }
       });
 
@@ -312,29 +317,98 @@ jQuery(document).ready(function ($) {
         var src = $(this).attr('src');
 
         // Youtube iframe
-        if(src.indexOf('https://www.youtube.com/embed/') != -1 ) {
+        var exp = new RegExp(/(youtu\.be|youtube\.com)/);
+ 
+        if( exp.test(src) ) {
 
           $(this).addClass('youtube')
 
-          var regExp = /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
-          var url = $(this).attr('src');
-          var match = url.match(regExp);
-          var match2 = match[2].length;
+            var ytbUrl = src;
+            var ytbH = $(this).height();
+            var ytbW = $(this).width();
 
-          if (match && match2 == 11) {
+            var fieldIdInput = $('<div />', {
+              'class': 'embed_placeholder_youtube embed_placeholder',
+              'data-url': ytbUrl,
+              'data-height': ytbH,
+              'data-width':ytbW,
+            })
 
-            var ytbID = match[2];
-            url = `https://www.youtube-nocookie.com/embed/${ytbID}?autoplay=0&rel=0`
+            fieldIdInput.text(MACS_COOKIES.embedCookiesYtb)
+            $(this).replaceWith(fieldIdInput)
 
-            $(this).attr('src',url); 
-
-            return match[2];
-          }
         }
       });
 
     }
-  }
 
-  macsCookies.init()
+    self.printEmbeds = function() {
+
+      $('.embed_placeholder_youtube').each(function() {
+
+        var url = $(this).attr('data-url');
+            iframeH = $(this).attr('data-height');
+            iframeW = $(this).attr('data-width');
+
+        var fieldIdInput = $('<iframe />', {
+          'class': 'embed_new_youtube',
+          'src': url,
+          'height': iframeH,
+          'width':iframeW,
+        })
+
+        $(this).replaceWith(fieldIdInput)
+
+      });
+
+      $('.embed_placeholder_soundcloud').each(function() {
+
+        var url = $(this).attr('data-url');
+            iframeH = $(this).attr('data-height');
+            iframeW = $(this).attr('data-width');
+
+        var fieldIdInput = $('<iframe />', {
+          'class': 'embed_new_soundcloud',
+          'src': url,
+          'height': iframeH,
+          'width': iframeW,
+        })
+
+        $(this).replaceWith(fieldIdInput)
+
+      });
+
+    }
+
+    self.trackUserConsent = function() {
+
+      $('#macs_cookies_accept_all').click(function(e) {
+        e.preventDefault()
+        // add GTM to track user consent- user accepted all cookies
+        if (typeof dataLayer !== 'undefined') {
+          dataLayer.push({ 'event' : 'user_consent', 'consent_type': 'accept_all' })
+        }
+      })
+
+      $('#macs_cookies_save_preferences').click(function(e) {
+        e.preventDefault()
+
+        $('.cookieConsent__checkbox_container').each(function() {
+          if($(this).find('input').is(':checked')){
+            var input = $(this).find('input').attr('id');
+
+            if( input === 'accept_cookie_statistics' ){
+              // add GTM to track user consent- user accepted statistics cookies
+              if (typeof dataLayer !== 'undefined') {
+                dataLayer.push({ 'event' : 'user_consent', 'consent_type': 'accept_statistics' })
+              }
+            }
+          }
+        })
+      })
+
+    }
+
+  }
+    macsCookies.init()
 })

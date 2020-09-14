@@ -30,17 +30,23 @@ class Taxonomy {
 	public function register(): void {
 
 		$args = array(
-			'labels'                     => [
+			'labels'            => [
 				'name'          => _x( 'Cookie Type', 'Taxonomy General Name', 'macs_cookies' ),
 				'singular_name' => _x( 'Cookie Type', 'Taxonomy Singular Name', 'macs_cookies' ),
 				'menu_name'     => __( 'Cookie Type', 'macs_cookies' ),
 			],
-			'hierarchical'               => true,
-			'public'                     => false,
-			'show_ui'                    => true,
-			'show_admin_column'          => true,
-			'show_in_nav_menus'          => false,
-			'show_tagcloud'              => false,
+			'hierarchical'      => true,
+			'public'            => false,
+			'show_ui'           => true,
+			'show_admin_column' => true,
+			'show_in_nav_menus' => false,
+			'show_tagcloud'     => false,
+			'capabilities'      => [
+				'manage_terms' => 'manage_options',
+				'edit_terms'   => 'manage_options',
+				'delete_terms' => 'manage_options',
+				'assign_terms' => 'manage_options',
+			],
 		);
 
 		register_taxonomy( self::SLUG, [ PostType::SLUG ], $args );
@@ -52,7 +58,7 @@ class Taxonomy {
 	public function deregister_other(): void {
 		$taxonomies = get_taxonomies( [], 'names', 'and' );
 
-		foreach( $taxonomies as $tax ) {
+		foreach ( $taxonomies as $tax ) {
 
 			if ( $tax === self::SLUG ) {
 				continue;
@@ -67,9 +73,11 @@ class Taxonomy {
 	 * Uses Fieldmanager
 	 */
 	public function register_order_field(): void {
-		$fm = new Fieldmanager_TextField( [
-			'name' => 'cookie_type_order',
-		] );
+		$fm = new Fieldmanager_TextField( 
+			[
+				'name' => 'cookie_type_order',
+			] 
+		);
 		
 		$fm->add_term_meta_box( __( 'Order', 'macs_cookies' ), self::SLUG );
 	}
