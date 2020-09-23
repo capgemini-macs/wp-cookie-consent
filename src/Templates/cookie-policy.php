@@ -13,22 +13,18 @@ get_header();
 	?>
 
 	<header>
-		<?php
-		get_extended_template_part( 'component/hero/hero-default', null, [
-			'title' => __( 'Cookie Policy', 'macs_cookies' ),
-		] );
-		?>
+		<?php do_action( 'macs_cookies_policy_header' ); ?>
 	</header>
 
-	<article>
-		<div class="section container cookie_section cookie_section--policy">
+	<div class="content">
+		<section class="section container cookie_section cookie_section--policy">
 			<div class="row">
 				<div class="col-12 main-content section__content article-text cookie_section__article-text cookie_section__article-text--policy">
 					<?php $context->render_content(); ?>
 				</div>
 			</div>
-		</div>
-	</article>
+		</section>
+	</div>
 
 	<?php
 get_footer();
