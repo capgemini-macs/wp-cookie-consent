@@ -13,15 +13,11 @@ get_header();
 	?>
 
 	<header>
-		<?php
-		get_extended_template_part( 'component/hero/hero-default', null, [
-			'title' => __( 'Cookie settings', 'macs_cookies' ),
-		] );
-		?>
+		<?php do_action( 'macs_cookies_preferences_header' ); ?>
 	</header>
 
-	<article>
-		<div class="section container cookie_section cookie_section--settings">
+	<div class="content">
+		<section class="section container cookie_section cookie_section--settings">
 			<div class="row">
 				<div class="col-12 main-content section__content article-text cookie_section__article-text cookie_section__article-text--settings">
 					<?php $context->render_intro_content(); ?>
@@ -35,8 +31,7 @@ get_header();
 			</div>
 
 			<div class="row">
-				<div class="col-12 main-content section__content article-text cookie_section__article-text">
-						
+				<div class="col-12 main-content section__content article-text cookie_section__article-text">					
 						<?php $context->render_consent_checkboxes(); ?>						
 
 						<div class="col-12 text-left">
@@ -49,16 +44,15 @@ get_header();
 				<div class="col-12 main-content section__content article-text cookie_section__article-text">
 					<p>
 					<?php 
-					$policy_url = get_bloginfo('url') . '/cookie-policy';
-					// phpcs:ignore  WordPress.Security.EscapeOutput.OutputNotEscaped -- dynamic part escaped
-					printf( __( 'For more information related to the cookies, please visit our <a href="%s">cookie policy</a>', 'macs_cookies' ), esc_url( $policy_url ) );
+					$policy_url = get_bloginfo( 'url' ) . '/cookie-policy';
+					// translators: %s is cookie policy url
+					printf( __( 'For more information related to the cookies, please visit our <a href="%s">cookie policy</a>', 'macs_cookies' ), esc_url( $policy_url ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- dynamic part escaped
 					?>
 					</p>
 				</div>
 			</div>
-			
-		</div>
-	</article>
+		</section>
+	</div>
 
 	<?php
 get_footer();
